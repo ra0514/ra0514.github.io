@@ -29,7 +29,7 @@ canvas{width:100%; height:100%;}
 
 <script>
 var forma=new THREE.SphereGeometry(1);
-var material=new THREE.MeshBasicMaterial();
+var material=new THREE.MeshBasicMaterial(normal);
 var esfera=new THREE.Mesh(forma,material);
 escena.add(esfera);
 function render(){
