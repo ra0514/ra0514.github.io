@@ -36,24 +36,6 @@ puntos.push(new THREE.Vector3(10,0,10));
 puntos.push(new THREE.Vector3(20,0,20));
 
 
-figura.moveTo(0,0);
-figura.lineTo(10,10);
-figura.lineTo(20,10);
-figura.lineTo(20,30);
-
-figura.lineTo(30,30);
-figura.lineTo(30,10);
-figura.lineTo(40,10);
-
-figura.lineTo(40,50);
-figura.lineTo(30,50);
-figura.lineTo(30,40);
-figura.lineTo(20,40);
-
-figura.lineTo(20,50);
-figura.lineTo(10,50);
-figura.lineTo(10,10);
-
 var forma=new THREE.LatheGeometry(puntos);
 var malla=new THREE.Mesh(forma);
 escena.add(malla);
