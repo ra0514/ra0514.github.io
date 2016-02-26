@@ -18,7 +18,7 @@ canvas{width:100%; height:100%;}
   var near=0.1;
   var far=1000;
   var camara=new THREE.PerspectiveCamera(fov,aspect,near,far);
-  camara.position.z=75;
+  camara.position.z=100;
   camara.position.x=0;
   camara.position.y=0;
   
@@ -45,7 +45,7 @@ escena.add(malla);
 function render(){
   requestAnimationFrame(render);
   
-  //malla.rotation.x += 0.1;
+  malla.rotation.x += 0.05;
   malla.rotation.y += 0.1;
   //malla.rotation.z += 0.1;
   
