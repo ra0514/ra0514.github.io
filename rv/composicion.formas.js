@@ -36,9 +36,10 @@ malla.rotation.y+=0.01;
 
 renderer.render(escena,camara);
 
-var escena,camara,renderer,malla;
+
 }
 
+var escena,camara,renderer,malla;
 setup();
 loop();
 
