@@ -17,8 +17,8 @@ Pierna.prototype=new THREE.Object3D();
 
 function setup(){
 var cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
-piernaD=newPierna();
-piernaI=newPierna();
+piernaD=new Pierna();
+piernaI=new Pierna();
 cuerpo.position.y=2;
 piernaD.position.z=-1;
 piernaI.position.z=1;
