@@ -48,7 +48,7 @@ piernaI.rotation.z-=step;
 }
 
 var escena,camara,renderer;
-var step,piernaD,piernaI,
+var step,piernaD,piernaI;
 
 setup();
 loop();
