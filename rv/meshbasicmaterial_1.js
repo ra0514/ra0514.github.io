@@ -25,5 +25,5 @@ renderer.render(escena,camara);
 
 var camara,escenar,renderer,malla;
 
-setupp();
+setup();
 loop();
