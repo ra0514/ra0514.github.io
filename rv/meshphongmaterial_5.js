@@ -3,7 +3,7 @@ var forma=new THREE.BoxGeometry(1,1,1);
 var material=new THREE.MeshPhongMaterial({color:'#00cc00'});
 malla=new THREE.Mesh(forma,material);
 
-var LuzPuntual=new THREE.PointLight(0xFFFFFF);
+var luzPuntual=new THREE.PointLight(0xFFFFFF);
 luzPuntual.position.x=10;
 luzPuntual.position.y=10;
 luzPuntual.position.z=10;
@@ -29,7 +29,7 @@ malla.rotation.y+=0.01;
 renderer.render(escena,camara);
 }
 
-var camara,escenar,renderer,malla,luzPuntual;
+var camara,escenar,renderer,malla;
 
 setup();
 loop();
