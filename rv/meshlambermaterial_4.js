@@ -1,6 +1,6 @@
 function setup(){
 var forma=new THREE.BoxGeometry(1,1,1);
-var material=new THREE.MeshLamberMaterial({color:'#ffffff'});
+var material=new THREE.MeshLambertMaterial({color:'#ffffff'});
 malla=new THREE.Mesh(forma,material);
 
 var LuzPuntual=new THREEE.PointLight(0xcc00cc);
