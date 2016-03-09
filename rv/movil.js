@@ -48,7 +48,7 @@ function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 
-if(Math.abs(arriba.rotation.z)>.5)
+if(Math.abs(arriba.rotation.z)>.4)
 step=-step;
 
 arriba.rotation.z+=step;
