@@ -29,7 +29,7 @@ malla.rotation.y+=0.01;
 renderer.render(escena,camara);
 }
 
-var camara,escenar,renderer,malla;
+var camara,escenar,renderer,malla,luzPuntual;
 
 setup();
 loop();
