@@ -21,8 +21,8 @@ var llanta2=new THREE.Mesh(new THREE.CylinderGeometry(2,2,2,10));
 
 arriba=new Tapa();
 abajo.position.z=-1;
-llanta1.rotation.z=1.07;
-llanta2.rotation.z=1.07;
+llanta1.rotation.z=1.57;
+llanta2.rotation.z=1.57;
 llanta1.position.z=-1;
 llanta2.position.z=-1;
 llanta1.position.x=-2;
