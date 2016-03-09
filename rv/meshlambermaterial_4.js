@@ -3,7 +3,7 @@ var forma=new THREE.BoxGeometry(1,1,1);
 var material=new THREE.MeshLambertMaterial({color:'#ffffff'});
 malla=new THREE.Mesh(forma,material);
 
-var LuzPuntual=new THREEE.PointLight(0xcc00cc);
+var LuzPuntual=new THREE.PointLight(0xcc00cc);
 luzPuntual.position.x=10;
 luzPuntual.position.y=10;
 luzPuntual.position.z=10;
