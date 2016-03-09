@@ -3,10 +3,10 @@ function Tapa(){
 THREE.Object3D.call(this);
 
 this.canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
-this.sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,8,1));
+this.sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,6,1));
 
 this.canon.position.y=0;
-this.sujetador.position.y=0;
+this.sujetador.position.y=3;
 
 this.add(this.canon);
 this.add(this.sujetador);
@@ -42,10 +42,10 @@ function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 
-if(Math.abs(arriba.rotation.x)>.5)
+if(Math.abs(arriba.rotation.z)>.5)
 step=-step;
 
-arriba.rotation.x+=step;
+arriba.rotation.z+=step;
 }
 
 var escena,camara,renderer;
