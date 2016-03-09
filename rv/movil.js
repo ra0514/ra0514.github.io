@@ -16,8 +16,8 @@ Tapa.prototype=new THREE.Object3D();
 
 function setup(){
 var abajo=new THREE.Mesh(new THREE.BoxGeometry(6,6,1));
-var llanta1=new THREE.Mesh(new THREE.CylinderGeometry(2,2,2,10));
-var llanta2=new THREE.Mesh(new THREE.CylinderGeometry(2,2,2,10));
+var llanta1=new THREE.Mesh(new THREE.CylinderGeometry(2,2,1,10));
+var llanta2=new THREE.Mesh(new THREE.CylinderGeometry(2,2,1,10));
 
 arriba=new Tapa();
 abajo.position.z=-1;
@@ -25,8 +25,8 @@ llanta1.rotation.z=1.57;
 llanta2.rotation.z=1.57;
 llanta1.position.z=-1;
 llanta2.position.z=-1;
-llanta1.position.x=-2;
-llanta2.position.x=2;
+llanta1.position.x=-4;
+llanta2.position.x=4;
 step=.01;
 escena=new THREE.Scene();
 escena.add(arriba);
