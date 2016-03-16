@@ -6,6 +6,8 @@ var material=new THREE.MeshPhongMaterial({map:textura});
 var forma=new THREE.SphereGeometry(1);
 malla=new THREE.Mesh(forma,material);
 
+malla.rotation.z +=0.25;
+
 var LuzPuntual=new THREE.PointLight(0xFFFFFF);
 LuzPuntual.position.x=10;
 LuzPuntual.position.y=10;
@@ -26,7 +28,6 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 
-malla.rotation.x +=0.01;
 malla.rotation.y +=0.01;
 
 renderer.render(escena,camara);
