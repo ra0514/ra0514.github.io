@@ -15,8 +15,8 @@ LuzPuntual.position.z=10;
 
 var LuzPuntual2=new THREE.PointLight(0xFFFFFF);
 LuzPuntual.position.x=-10;
-LuzPuntual.position.y=-10;
-LuzPuntual.position.z=-10;
+LuzPuntual.position.y=10;
+LuzPuntual.position.z=10;
 
 escena=new THREE.Scene();
 escena.add(malla);
