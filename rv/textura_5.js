@@ -6,8 +6,6 @@ var material=new THREE.MeshPhongMaterial({map:textura});
 var forma=new THREE.SphereGeometry(1);
 malla=new THREE.Mesh(forma,material);
 
-malla.scale.set(1,4,9);
-
 var LuzPuntual=new THREE.PointLight(0xFFFFFF);
 LuzPuntual.position.x=10;
 LuzPuntual.position.y=10;
