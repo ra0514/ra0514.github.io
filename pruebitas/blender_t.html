@@ -55,7 +55,7 @@ scene.add(directionalLight2);
 
 var cuboMaterial=new THREE.MeshPhongMaterial({color:0xFFFFFF,map:THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif')});
 loader=new THREE.JSONLoader();
-loader.load('cubo.json,function(geometry){
+loader.load('cubo.json',function(geometry){
 mesh=new THREE.Mesh(geometry,cuboMaterial);
 mesh.position.x=0;
 mesh.position.y=0;
