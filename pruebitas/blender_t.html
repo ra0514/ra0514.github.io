@@ -1,18 +1,17 @@
 <!doctype html>
 <html lang="en">
-<head>
-<title>Prueba</title>
-
-<meta charset=UTF-8">
-<meta name="viewport" content="width=device-width, user-scalable=no,  minimum-scale=1.0, maximum-scale=1.0">
-<style>
-body {
-font-family:Monospace;
-backgroun-color:#026b6b
-margin: 0px;
-}
-</style>
-</head>
+  <head>
+    <title>Prueba</title>
+    <meta charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,  minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      body {
+      font-family:Monospace;
+      backgroun-color:#026b6b
+      margin: 0px;
+      }
+    </style>
+  </head>
 
 <body>
 <div id="container"></div>
@@ -53,13 +52,14 @@ var directionalLight2=new THREE.DirectionalLight(0xF7EFBE,1);
 directionalLight2.position.set(-0.5,-1,-0.5);
 scene.add(directionalLight2);
 
-var cuboMaterial=new THREE.MeshPhongMaterial({color:0xFFFFFF,map:THREE.ImageUtils.loadTexture('textura.png')});
+//var cuboMaterial=new THREE.MeshPhongMaterial({color:0xffffff,map:THREE.ImageUtils.loadTexture('textura.png')});
+var cuboMaterial=new THREE.MeshPhongMaterial({map:THREE.ImageUtils.loadTexture('textura.png')});
 loader=new THREE.JSONLoader();
 loader.load('cubo.json',function(geometry){
 mesh=new THREE.Mesh(geometry,cuboMaterial);
-mesh.position.x=0;
-mesh.position.y=0;
-mesh.position.z=0;
+//mesh.position.x=0;
+//mesh.position.y=0;
+//mesh.position.z=0;
 mesh.scale.z=25;
 mesh.scale.x=25;
 mesh.scale.y=25;
