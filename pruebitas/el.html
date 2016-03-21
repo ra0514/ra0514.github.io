@@ -25,8 +25,10 @@
 	var width = window.innerWidth, height = window.innerHeight;
 	var handler = THREE.AnimationHandler.CATMULLROM;
 	var stats = document.getElementById("stats");
+
 	init();
 	animate();
+
 	function init(){
 		scene = new THREE.Scene();
 		camera = new THREE.PerspectiveCamera(65, width/height, 0.1, 1000);
@@ -34,20 +36,26 @@
 		renderer.setSize(width, height);
 		renderer.setClearColor(0x00ff00);
 		document.body.appendChild(renderer.domElement);
+
 		controls = new THREE.OrbitControls(camera, renderer.domElement);
 		controls.enableDamping = true;
 		controls.dampingFactor = 0.25;
 		controls.enableZoom = true;
+
 		light = new THREE.DirectionalLight(0xffffff, 1);
 		light.position.set(10,10,10);
 		scene.add(light);
+
 		camera.position.z = 30;
+
 		loader = new THREE.JSONLoader();
 		loader.load('cubo.json', addModel);
 	}
+
 	function addModel(geometry, materials){
 		materials.forEach(function (mat){
 			mat.skinning = true;});
+
 		wormie = new THREE.SkinnedMesh(geometry, new THREE.MeshFaceMaterial(materials));
 		idle = new THREE.Animation(wormie, geometry.animations[0], handler);
 		rest = new THREE.Animation(wormie, geometry.animations[1], handler);
@@ -56,6 +64,7 @@
 		rest.play();idle.stop();run.stop();jump.stop();
 		scene.add(wormie);
 	}	
+
 	function animate(){
 		requestAnimationFrame(animate);
 		controls.update();
@@ -64,10 +73,12 @@
 		THREE.AnimationHandler.update(delta);
 		render();
 	}
+
 	function render(){
 		renderer.clear();
 		renderer.render(scene, camera);
 	}
+
 	//Video tutorials about this subject provided by BonnieN360- https://www.youtube.com/watch?v=8pKCQDWc6fQ
 	//Credit to Akihiro Oyamada for helping me find this out- https://www.youtube.com/channel/UCumqOjuEElx51vI2RMUW66w
 	</script>
