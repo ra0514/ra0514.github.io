@@ -25,14 +25,7 @@ camera=new THREE.PerspectiveCamera(60,window.innerWidth/Window.innerHeight,1,300
 camera.position.z=1000;
 
 loader=new THREE.JSONLoader();
-loader.load('cubo.json',function(geometry){
-mesh=new THREE.Mesh(geometry);
-mesh.scale.z=25;
-mesh.scale.x=25;
-mesh.scale.y=25;
-mesh.id="cubo";
-scene.add(mesh);
-});
+loader.load('cubo.json');
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight);
