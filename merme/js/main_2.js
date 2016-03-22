@@ -36,7 +36,7 @@ function initLights() {
 var mesh = null;
 function initMesh() {
     var loader = new THREE.JSONLoader();
-    loader.load('./a.json', function ( geometry, materials ) {
+    loader.load('./cubo.json', function ( geometry, materials ) {
 		var material = new THREE.MultiMaterial( materials );
 		var object = new THREE.Mesh( geometry, material );
 		scene.add( object );
