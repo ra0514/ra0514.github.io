@@ -1,63 +1,35 @@
-var scene, camera, renderer;
+function setup(){
+var material=new THREE.MeshBasicMaterial();
 
-var WIDTH  = window.innerWidth;
-var HEIGHT = window.innerHeight;
+var gl = canvas.getContext('webgl');
+var objStr = document.getElementById('my_cube.obj').innerHTML;
+var mesh = new OBJ.Mesh(objStr);
 
-var SPEED = 0.01;
 
-function init() {
-    scene = new THREE.Scene();
+var forma=new THREE.BoxGeometry(1,1,1);
 
-    initMesh();
-    initCamera();
-    initLights();
-    initRenderer();
+malla=new THREE.Mesh(forma,material);
 
-    document.body.appendChild(renderer.domElement);
+escena=new THREE.Scene();
+escena.add(malla);
+
+camara=new THREE.PerspectiveCamera();
+camara.position.z=100;
+
+renderer=new THREE.WebGLRenderer();
+renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
+document.body.appendChild(renderer.domElement);
 }
 
-function initCamera() {
-    camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 10);
-    camera.position.set(0, 3.5, 5);
-    camera.lookAt(scene.position);
+function loop(){
+requestAnimationFrame(loop);
+
+malla.rotation.x +=0.01;
+malla.rotation.y +=0.01;
+
+renderer.render(escena,camara);
 }
 
-
-function initRenderer() {
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(WIDTH, HEIGHT);
-}
-
-function initLights() {
-    var light = new THREE.AmbientLight(0xffffff);
-    scene.add(light);
-}
-
-var mesh = null;
-function initMesh() {
-    var loader = new THREE.JSONLoader();
-    loader.load('./cuboo.json', function ( geometry, materials ) {
-		var material = new THREE.MultiMaterial( materials );
-		var object = new THREE.Mesh( geometry, material );
-		scene.add( object );
-    });
-}
-
-function rotateMesh() {
-    if (!mesh) {
-        return;
-    }
-
-    mesh.rotation.x -= SPEED * 2;
-    mesh.rotation.y -= SPEED;
-    mesh.rotation.z -= SPEED * 3;
-}
-
-function render() {
-    requestAnimationFrame(render);
-    rotateMesh();
-    renderer.render(scene, camera);
-}
-
-init();
-render();
+var camara,excena,renderer,malla;
+setup();
+loop();
