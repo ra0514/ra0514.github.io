@@ -32,7 +32,7 @@ obstaculo2=raycaster2.intersectObject(cubo2);
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
 step=-step;
 
-pelota.position+=step;
+pelota.position.x +=step;
 raycaster1.set(pelota.position.new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position.new THREE.Vector3(-1,0,0));
 
