@@ -24,7 +24,7 @@ document.body.appendChild(renderer.domElement);
 step=0.01;
 }
 
-funtion loop(){
+function loop(){
 
 obstaculo1=raycaster1.intersectObject(cubo1);
 obstaculo2=raycaster2.intersectObject(cubo2);
