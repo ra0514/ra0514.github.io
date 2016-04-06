@@ -10,6 +10,10 @@ pared1.position.y=30;
 pared2.position.y=-30;
 pared3.position.x=30;
 pared4.position.x=-30;
+pared1.position.z=-5;
+pared2.position.z=-5;
+pared3.position.z=-5;
+pared4.position.z=-5;
 
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
 var sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,6,1));
