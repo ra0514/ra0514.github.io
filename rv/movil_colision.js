@@ -94,7 +94,10 @@ renderer.render(escena,camara);
 }
 
 var escena,camara,renderer;
-var malla;
+var malla,pared1,pared2,pared3,pared4;
+var raycaster1,raycaster2,raycaster3,raycaster4,step;
+var obstaculo1,obstaculo2,obstaculo3,obstaculo4;
+
 
 setup();
 loop();
