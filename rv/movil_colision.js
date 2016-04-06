@@ -68,10 +68,10 @@ step=0.5;
 
 
 function loop(){
-obstaculo1=raycaster1.intersectObject(cubo1);
-obstaculo2=raycaster2.intersectObject(cubo2);
-obstaculo3=raycaster3.intersectObject(cubo3);
-obstaculo4=raycaster4.intersectObject(cubo4);
+obstaculo1=raycaster1.intersectObject(pared1);
+obstaculo2=raycaster2.intersectObject(pared2);
+obstaculo3=raycaster3.intersectObject(pared3);
+obstaculo4=raycaster4.intersectObject(pared4);
   
   if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5)))
 step=-step;
