@@ -46,8 +46,6 @@ escena.add(malla);
 //agregar cuarto
 escena.add(pared1);
 escena.add(pared2);
-escena.add(pared3);
-escena.add(pared4);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=50;
@@ -61,9 +59,6 @@ document.body.appendChild(renderer.domElement);
 
 function loop(){
 requestAnimationFrame(loop);
-
-malla.rotation.x+=0.01;
-malla.rotation.y+=0.01;
 
 renderer.render(escena,camara);
 }
