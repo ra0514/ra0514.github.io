@@ -6,10 +6,10 @@ pared2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial(
 pared3=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pared4=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 
-pared1.rotation.z=20;
-pared2.rotation.z=-20;
-pared3.position.x=20;
-pared4.position.x=-20;
+pared1.rotation.y=40;
+pared2.rotation.y=-40;
+pared3.position.x=40;
+pared4.position.x=-40;
 
 
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
@@ -46,9 +46,11 @@ escena.add(malla);
 //agregar cuarto
 escena.add(pared1);
 escena.add(pared2);
+escena.add(pared3);
+escena.add(pared4);
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=50;
+camara.position.z=80;
 camara.position.x=2;
 camara.position.y=5;
 
