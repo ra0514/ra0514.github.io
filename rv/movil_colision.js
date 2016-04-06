@@ -1,10 +1,10 @@
 function setup(){
 
 //cuarto
-pared1=new THREE.Mesh(new THREE.BoxGeometry(60,1,1),new THREE.MeshNormalMaterial());
-pared2=new THREE.Mesh(new THREE.BoxGeometry(60,1,1),new THREE.MeshNormalMaterial());
-pared3=new THREE.Mesh(new THREE.BoxGeometry(1,60,1),new THREE.MeshNormalMaterial());
-pared4=new THREE.Mesh(new THREE.BoxGeometry(1,60,1),new THREE.MeshNormalMaterial());
+pared1=new THREE.Mesh(new THREE.BoxGeometry(60,1,10),new THREE.MeshNormalMaterial());
+pared2=new THREE.Mesh(new THREE.BoxGeometry(60,1,10),new THREE.MeshNormalMaterial());
+pared3=new THREE.Mesh(new THREE.BoxGeometry(1,60,10),new THREE.MeshNormalMaterial());
+pared4=new THREE.Mesh(new THREE.BoxGeometry(1,60,10),new THREE.MeshNormalMaterial());
 
 pared1.position.y=30;
 pared2.position.y=-30;
