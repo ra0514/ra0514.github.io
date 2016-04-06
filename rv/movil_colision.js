@@ -77,7 +77,7 @@ obstaculo2=raycaster2.intersectObject(pared2);
 obstaculo3=raycaster3.intersectObject(pared3);
 obstaculo4=raycaster4.intersectObject(pared4);
   
-  if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||(obstaculo3.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo4.length>0 && (obstaculo1[0].distance<=0.5)))
+  if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||(obstaculo3.length>0 && (obstaculo3[0].distance<=0.5))||(obstaculo4.length>0 && (obstaculo4[0].distance<=0.5)))
 step=-step;
 malla.position.x +=step;
 
