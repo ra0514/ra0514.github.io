@@ -54,10 +54,10 @@ camara.position.x=2;
 camara.position.y=5;
 
 
-raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(9,0,0));
-raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-9,0,0));
-raycaster3=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,9,0));
-raycaster4=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,-9,0));
+raycaster1=new THREE.Raycaster(malla.position,new THREE.Vector3(9,0,0));
+raycaster2=new THREE.Raycaster(malla.position,new THREE.Vector3(-9,0,0));
+raycaster3=new THREE.Raycaster(malla.position,new THREE.Vector3(0,9,0));
+raycaster4=new THREE.Raycaster(malla.position,new THREE.Vector3(0,-9,0));
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
