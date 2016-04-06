@@ -6,10 +6,10 @@ pared2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial(
 pared3=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 pared4=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 
-pared1.rotation.y=40;
-pared2.rotation.y=-40;
-pared3.position.x=40;
-pared4.position.x=-40;
+pared1.rotation.y=30;
+pared2.rotation.y=-30;
+pared3.position.x=30;
+pared4.position.x=-30;
 
 
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
