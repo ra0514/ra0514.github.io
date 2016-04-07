@@ -58,8 +58,8 @@ escena.add(camara);
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
-stepx=0.2;
-stepy=0;
+stepy=0.2;
+stepx=0;
 }
 
 function loop(){
