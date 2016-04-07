@@ -83,9 +83,9 @@ stepx=0;
 }
 
 if((obstaculo4.length>0 && (obstaculo4[0].distance<=4)))
-{stepy=-stepy;
-//pelota.rotation.z=1.57;
-//stepx=-0.2;
+{stepy=0;
+pelota.rotation.z=1.57;
+stepx=-0.2;
 }
 
 if((obstaculo2.length>0 && (obstaculo2[0].distance<=4)))
