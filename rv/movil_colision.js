@@ -43,6 +43,11 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 malla=new THREE.Mesh(forma);
 
+raycaster3=new THREE.Raycaster(malla.position,new THREE.Vector3(1,0,0));
+raycaster4=new THREE.Raycaster(malla.position,new THREE.Vector3(-1,0,0));
+raycaster1=new THREE.Raycaster(malla.position,new THREE.Vector3(0,1,0));
+raycaster2=new THREE.Raycaster(malla.position,new THREE.Vector3(0,-1,0));
+
 escena=new THREE.Scene();
 escena.add(malla);
 
@@ -54,12 +59,6 @@ escena.add(pared4);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=80;
-
-
-raycaster3=new THREE.Raycaster(malla.position,new THREE.Vector3(9,0,0));
-raycaster4=new THREE.Raycaster(malla.position,new THREE.Vector3(-9,0,0));
-raycaster1=new THREE.Raycaster(malla.position,new THREE.Vector3(0,9,0));
-raycaster2=new THREE.Raycaster(malla.position,new THREE.Vector3(0,-9,0));
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -75,20 +74,19 @@ obstaculo2=raycaster2.intersectObject(pared2);
 obstaculo3=raycaster3.intersectObject(pared3);
 obstaculo4=raycaster4.intersectObject(pared4);
   
-  if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||(obstaculo3.length>0 && (obstaculo3[0].distance<=0.5))||(obstaculo4.length>0 && (obstaculo4[0].distance<=0.5)))
+if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 && (obstaculo2[0].distance<=0.5))||(obstaculo3.length>0 && (obstaculo3[0].distance<=0.5))||(obstaculo4.length>0 && (obstaculo4[0].distance<=0.5)))
 step=-step;
 malla.position.x +=step;
 
 
-raycaster1.set(malla.position,new THREE.Vector3(9,0,0));
-raycaster2.set(malla.position,new THREE.Vector3(-9,0,0));
-raycaster3.set(malla.position,new THREE.Vector3(0,9,0));
-raycaster4.set(malla.position,new THREE.Vector3(0,-9,0));
+raycaster1.set(malla.position,new THREE.Vector3(1,0,0));
+raycaster2.set(malla.position,new THREE.Vector3(-1,0,0));
+raycaster3.set(malla.position,new THREE.Vector3(0,1,0));
+raycaster4.set(malla.position,new THREE.Vector3(0,-1,0));
   
   
-  
-requestAnimationFrame(loop);
 renderer.render(escena,camara);
+requestAnimationFrame(loop);
 }
 
 var escena,camara,renderer;
