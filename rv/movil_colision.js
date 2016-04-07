@@ -61,7 +61,7 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 stepy=0.2;
 stepx=0;
-malla.rotate.z=90;
+pelota.rotation.z=1.57;
 }
 
 function loop(){
