@@ -73,9 +73,9 @@ obstaculo3=raycaster3.intersectObject(cubo3);
 obstaculo4=raycaster4.intersectObject(cubo4);
 
 if((obstaculo3.length>0 && (obstaculo3[0].distance<=10)))
-{stepy=0;
-pelota.rotation.z=-1.57;
-stepx=0.2;
+{stepy=-0.2;
+//pelota.rotation.z=-1.57;
+//stepx=0.2;
 }
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=10)))
@@ -90,7 +90,7 @@ pelota.rotation.z=1.57;
 stepx=-0.2;
 }
 
-if((obstaculo2.length>0 && (obstaculo2[0].distance<=20)))
+if((obstaculo2.length>0 && (obstaculo2[0].distance<=10)))
 {stepy=0.2;
 pelota.rotation.z=0;
 stepx=0;
