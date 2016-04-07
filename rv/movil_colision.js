@@ -33,8 +33,6 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
-pelota.position.x=-5;
-
 cubo1.position.x=20;
 cubo2.position.x=-20;
 
