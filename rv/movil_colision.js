@@ -59,7 +59,9 @@ escena.add(camara);
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
-step=0.2;
+stepy=0.2;
+stepx=0;
+malla.rotate.z=90;
 }
 
 function loop(){
@@ -69,10 +71,17 @@ obstaculo2=raycaster2.intersectObject(cubo2);
 obstaculo3=raycaster3.intersectObject(cubo3);
 obstaculo4=raycaster4.intersectObject(cubo4);
 
-if((obstaculo1.length>0 && (obstaculo1[0].distance<=4))||(obstaculo2.length>0 && (obstaculo2[0].distance<=4)))
-step=-step;
+//if((obstaculo1.length>0 && (obstaculo1[0].distance<=4))||(obstaculo2.length>0 && (obstaculo2[0].distance<=4)))
+//step=-step;
 
-pelota.position.x +=step;
+if((obstaculo3.length>0 && (obstaculo1[0].distance<=4))||(obstaculo2.length>0 && (obstaculo2[0].distance<=4)))
+{stepy=0;
+stepx=0.2;
+
+
+}
+pelota.position.y +=stepy;
+pelota.position.x +=stepx;
 raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position,new THREE.Vector3(-1,0,0));
 
