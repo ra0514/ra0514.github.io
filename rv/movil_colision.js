@@ -71,9 +71,9 @@ obstaculo3=raycaster3.intersectObject(cubo3);
 obstaculo4=raycaster4.intersectObject(cubo4);
 
 if((obstaculo3.length>0 && (obstaculo3[0].distance<=4)))
-{stepy=-stepy;
+{stepy=0;
 pelota.rotation.z=-1.57;
-//stepx=0.2;
+stepx=0.2;
 }
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=4)))
