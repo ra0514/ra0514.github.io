@@ -54,8 +54,6 @@ escena.add(pared4);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=80;
-camara.position.x=2;
-camara.position.y=5;
 
 
 raycaster3=new THREE.Raycaster(malla.position,new THREE.Vector3(9,0,0));
