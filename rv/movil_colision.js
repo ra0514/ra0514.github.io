@@ -33,16 +33,19 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
-pelota.position.x=-10;
+pelota.position.x=10;
 
-cubo1.position.x=20;
-cubo2.position.x=-20;
+cubo1.position.x=40;
+cubo2.position.x=0;
 
 cubo3.position.y=20;
 cubo4.position.y=-20;
 
+cubo3.position.x=20;
+cubo4.position.x=20;
+
 camara=new THREE.PerspectiveCamera();
-camara.position.z=60;
+camara.position.z=120;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
@@ -72,9 +75,9 @@ obstaculo3=raycaster3.intersectObject(cubo3);
 obstaculo4=raycaster4.intersectObject(cubo4);
 
 if((obstaculo3.length>0 && (obstaculo3[0].distance<=10)))
-{stepy=-0.2;
-//pelota.rotation.z=-1.57;
-//stepx=0.2;
+{stepy=0;
+pelota.rotation.z=-1.57;
+stepx=0.2;
 };
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=10)))
@@ -84,9 +87,9 @@ stepx=0;
 };
 
 if((obstaculo4.length>0 && (obstaculo4[0].distance<=10)))
-{stepy=0.2;
+{stepy=0;
 pelota.rotation.z=1.57;
-stepx=0;
+stepx=-0.2;
 };
 
 if((obstaculo2.length>0 && (obstaculo2[0].distance<=10)))
