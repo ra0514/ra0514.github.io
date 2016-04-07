@@ -41,7 +41,7 @@ THREE.GeometryUtils.merge(forma,abajo);
 THREE.GeometryUtils.merge(forma,llanta1);
 THREE.GeometryUtils.merge(forma,llanta2);
 
-malla=new THREE.Mesh(forma);
+malla=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
 raycaster3=new THREE.Raycaster(malla.position,new THREE.Vector3(1,0,0));
 raycaster4=new THREE.Raycaster(malla.position,new THREE.Vector3(-1,0,0));
@@ -56,6 +56,8 @@ escena.add(pared1);
 escena.add(pared2);
 escena.add(pared3);
 escena.add(pared4);
+
+escena.add(camara);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=80;
