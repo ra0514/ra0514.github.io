@@ -101,14 +101,16 @@ pelota.position.y +=stepy;
 pelota.position.x +=stepx;
 raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position,new THREE.Vector3(-1,0,0));
+raycaster1.set(pelota.position,new THREE.Vector3(0,1,0));
+raycaster2.set(pelota.position,new THREE.Vector3(0,-1,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
 
-var cubo1,cubo2,pelota,escena,camara,renderer;
-var raycaster1,raycaster2,step;
-var obstaculo1,obstaculo2;
+var cubo1,cubo2,cubo3,cubo4,pelota,escena,camara,renderer;
+var raycaster1,raycaster2,raycaster3,raycaster4,step;
+var obstaculo1,obstaculo2,obstaculo3,obstaculo4;
 
 setup();
 loop();
