@@ -1,9 +1,9 @@
 function setup(){
-cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,40,10),new THREE.MeshNormalMaterial());
-cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,40,10),new THREE.MeshNormalMaterial());
+cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),new THREE.MeshNormalMaterial());
+cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),new THREE.MeshNormalMaterial());
 
-cubo3=new THREE.Mesh(new THREE.BoxGeometry(40,1,10),new THREE.MeshNormalMaterial());
-cubo4=new THREE.Mesh(new THREE.BoxGeometry(40,1,10),new THREE.MeshNormalMaterial());
+cubo3=new THREE.Mesh(new THREE.BoxGeometry(40,1,5),new THREE.MeshNormalMaterial());
+cubo4=new THREE.Mesh(new THREE.BoxGeometry(40,1,5),new THREE.MeshNormalMaterial());
 
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
 var sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,6,1));
@@ -69,25 +69,25 @@ obstaculo2=raycaster2.intersectObject(cubo2);
 obstaculo3=raycaster3.intersectObject(cubo3);
 obstaculo4=raycaster4.intersectObject(cubo4);
 
-if((obstaculo3.length>0 && (obstaculo3[0].distance<=10)))
+if((obstaculo3.length>0 && (obstaculo3[0].distance<=5)))
 {stepy=0;
 pelota.rotation.z=-1.57;
 stepx=0.2;
 };
 
-if((obstaculo1.length>0 && (obstaculo1[0].distance<=10)))
+if((obstaculo1.length>0 && (obstaculo1[0].distance<=5)))
 {stepy=-0.2;
 pelota.rotation.z=-3.14;
 stepx=0;
 };
 
-if((obstaculo4.length>0 && (obstaculo4[0].distance<=10)))
+if((obstaculo4.length>0 && (obstaculo4[0].distance<=5)))
 {stepy=0;
 pelota.rotation.z=1.57;
 stepx=-0.2;
 };
 
-if((obstaculo2.length>0 && (obstaculo2[0].distance<=10)))
+if((obstaculo2.length>0 && (obstaculo2[0].distance<=5))&&(obstaculo3[0].distance>=5))
 {stepy=0.2;
 pelota.rotation.z=0;
 stepx=0;
