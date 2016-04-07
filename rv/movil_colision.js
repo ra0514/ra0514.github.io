@@ -99,10 +99,11 @@ stepx=0;
 
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
+
 raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2.set(pelota.position,new THREE.Vector3(-1,0,0));
-raycaster1.set(pelota.position,new THREE.Vector3(0,1,0));
-raycaster2.set(pelota.position,new THREE.Vector3(0,-1,0));
+raycaster3.set(pelota.position,new THREE.Vector3(0,1,0));
+raycaster4.set(pelota.position,new THREE.Vector3(0,-1,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
