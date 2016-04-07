@@ -1,6 +1,9 @@
 function setup(){
-cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
-cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,60,1),new THREE.MeshNormalMaterial());
+cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,60,1),new THREE.MeshNormalMaterial());
+
+cubo3=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
+cubo4=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshNormalMaterial());
 
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
 var sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,6,1));
@@ -30,20 +33,26 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
-cubo1.position.x=7;
-cubo2.position.x=-7
+cubo1.position.x=20;
+cubo2.position.x=-20;
+
+cubo3.position.y=20;
+cubo4.position.y=-20;
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=20;
+camara.position.z=40;
 
-raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
-raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
+raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(4,0,0));
+raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-4,0,0));
 
 escena=new THREE.Scene();
 escena.add(cubo1);
 escena.add(cubo2);
 escena.add(pelota);
 escena.add(camara);
+
+escena.add(cubo3);
+escena.add(cubo4);
 
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
@@ -60,8 +69,8 @@ if((obstaculo1.length>0 && (obstaculo1[0].distance<=0.5))||(obstaculo2.length>0 
 step=-step;
 
 pelota.position.x +=step;
-raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
-raycaster2.set(pelota.position,new THREE.Vector3(-1,0,0));
+raycaster1.set(pelota.position,new THREE.Vector3(4,0,0));
+raycaster2.set(pelota.position,new THREE.Vector3(-4,0,0));
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
