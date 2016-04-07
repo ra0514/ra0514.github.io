@@ -40,7 +40,7 @@ cubo3.position.y=20;
 cubo4.position.y=-20;
 
 camara=new THREE.PerspectiveCamera();
-camara.position.z=40;
+camara.position.z=60;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(4,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-4,0,0));
