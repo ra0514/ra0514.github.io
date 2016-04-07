@@ -61,7 +61,6 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 stepy=0.2;
 stepx=0;
-pelota.rotation.z=1.57;
 }
 
 function loop(){
@@ -77,8 +76,7 @@ obstaculo4=raycaster4.intersectObject(cubo4);
 if((obstaculo3.length>0 && (obstaculo1[0].distance<=4))||(obstaculo2.length>0 && (obstaculo2[0].distance<=4)))
 {stepy=0;
 stepx=0.2;
-
-
+pelota.rotation.z=1.57;
 }
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
