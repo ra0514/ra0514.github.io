@@ -33,19 +33,14 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
-pelota.position.x=10;
-
-cubo1.position.x=40;
-cubo2.position.x=0;
+cubo1.position.x=20;
+cubo2.position.x=-20;
 
 cubo3.position.y=20;
 cubo4.position.y=-20;
 
-cubo3.position.x=20;
-cubo4.position.x=20;
-
 camara=new THREE.PerspectiveCamera();
-camara.position.z=120;
+camara.position.z=60;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
