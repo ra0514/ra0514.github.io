@@ -46,7 +46,6 @@ camara.position.z=60;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
-
 raycaster3=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,1,0));
 raycaster4=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,-1,0));
 
@@ -76,25 +75,25 @@ if((obstaculo3.length>0 && (obstaculo3[0].distance<=10)))
 {stepy=-0.2;
 //pelota.rotation.z=-1.57;
 //stepx=0.2;
-}
+};
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=10)))
 {stepy=-0.2;
 pelota.rotation.z=-3.14;
 stepx=0;
-}
+};
 
 if((obstaculo4.length>0 && (obstaculo4[0].distance<=10)))
 {stepy=0;
 pelota.rotation.z=1.57;
 stepx=-0.2;
-}
+};
 
 if((obstaculo2.length>0 && (obstaculo2[0].distance<=10)))
 {stepy=0.2;
 pelota.rotation.z=0;
 stepx=0;
-}
+};
 
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
