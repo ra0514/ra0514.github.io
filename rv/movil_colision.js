@@ -84,9 +84,9 @@ stepx=0;
 };
 
 if((obstaculo4.length>0 && (obstaculo4[0].distance<=10)))
-{stepy=0;
+{stepy=0.2;
 pelota.rotation.z=1.57;
-stepx=-0.2;
+stepx=0;
 };
 
 if((obstaculo2.length>0 && (obstaculo2[0].distance<=10)))
