@@ -56,9 +56,8 @@ Pelota.prototype.sense=function(enviroment){
   Pelota.prototype.act=function(enviroment){
   if(this.colision==1)
   {
-  stepy=0;
-  pelota.rotation.z=-1.57;
-  stepx=0.2;
+  this.stepy=0;
+  this.stepx=0.2;
   //this.step=-this.step;
   }  
   this.position.x +=this.stepx;
