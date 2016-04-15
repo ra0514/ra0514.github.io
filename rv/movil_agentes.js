@@ -46,10 +46,28 @@ Pelota.prototype.sense=function(enviroment){
   this.sensor.set(this.position,new THREE.Vector3(0,-1,0));
   var obstaculo4=this.sensor.intersectObjects(enviroment.children,true);
   
-  if((obstaculo3.length>0 && (obstaculo3[0].distance <= 3)) || (obstaculo4.length>0 && (obstaculo4[0].distance <= 3)))
+  if(obstaculo3.length>0 && (obstaculo3[0].distance <= 3))
   {
   this.stepy=0;
   this.stepx=0.2;
+  } 
+  
+  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 3))
+  {
+  this.stepy=-0.2;
+  this.stepx=0;
+  } 
+  
+  if(obstaculo4.length>0 && (obstaculo4[0].distance <= 3))
+  {
+  this.stepy=0;
+  this.stepx=-0.2;
+  } 
+  
+  if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3)&&(obstaculo3[0].distance >= 3))
+  {
+  this.stepy=0.2;
+  this.stepx=0;
   } 
   
   //this.colision=1;
