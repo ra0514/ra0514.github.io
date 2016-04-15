@@ -47,15 +47,20 @@ Pelota.prototype.sense=function(enviroment){
   var obstaculo4=this.sensor.intersectObjects(enviroment.children,true);
   
   if((obstaculo3.length>0 && (obstaculo3[0].distance <= 3)) || (obstaculo4.length>0 && (obstaculo4[0].distance <= 3)))
-  {stepy=0;
-  pelota.rotation.z=-1.57;
-  stepx=0.2;
-  };
+  this.colision=1;
+  else
+  this.colision=0;
   
   };
   
   Pelota.prototype.act=function(enviroment){
-    
+  if(this.colision==1)
+  {
+  stepy=0;
+  pelota.rotation.z=-1.57;
+  stepx=0.2;
+  //this.step=-this.step;
+  }  
   this.position.x +=this.stepx;
   this.position.y +=this.stepy;
   
