@@ -47,20 +47,11 @@ Pelota.prototype.sense=function(enviroment){
   
   if(obstaculo1.length>0 && (obstaculo1[0].distance <= 3))
   this.colision=1;
-  else
-  this.colision=0;
-  
-  if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3))
+  else if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3))
   this.colision=2;
-  else
-  this.colision=0;
-  
-  if(obstaculo3.length>0 && (obstaculo3[0].distance <= 3))
+  else if(obstaculo3.length>0 && (obstaculo3[0].distance <= 3))
   this.colision=3;
-  else
-  this.colision=0;
-  
-  if(obstaculo4.length>0 && (obstaculo4[0].distance <= 3))
+  else if(obstaculo4.length>0 && (obstaculo4[0].distance <= 3))
   this.colision=4;
   else
   this.colision=0;
