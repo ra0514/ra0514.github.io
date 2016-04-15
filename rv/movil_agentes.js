@@ -51,18 +51,18 @@ Pelota.prototype.sense=function(enviroment){
   this.stepx=0.2;
   } 
   
-  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 1))
+  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 2))
   {
   this.stepy=-0.2;
   this.stepx=0;
   } 
-  /*
+
   if(obstaculo4.length>0 && (obstaculo4[0].distance <= 3))
   {
   this.stepy=0;
   this.stepx=-0.2;
   } 
-  
+    /*
   if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3)&&(obstaculo3[0].distance >= 3))
   {
   this.stepy=0.2;
