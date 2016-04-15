@@ -51,7 +51,7 @@ Pelota.prototype.sense=function(enviroment){
   this.stepx=0.2;
   } 
   
-  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 0.1))
+  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 1))
   {
   this.stepy=-0.2;
   this.stepx=0;
