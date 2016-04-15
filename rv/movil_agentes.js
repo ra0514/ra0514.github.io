@@ -66,12 +66,8 @@ Pelota.prototype.sense=function(enviroment){
   camara= new THREE.PerspectiveCamera();
   camara.position.z=60;
   
-  entorno.add(new Pared(1,14,0));
-    entorno.add(new Pared(1,-7,0));
-      entorno.add(new Pared(1,7,1));
-        entorno.add(new Pared(1,-7,1));
-          entorno.add(new Pared(1,7,1));
-            entorno.add(new Pared(1,7,-1));
+  entorno.add(new Pared(3,14,-1));
+        entorno.add(new Pared(3,-14,-1));
               entorno.add(new Pelota());
               entorno.add(camara);
               
