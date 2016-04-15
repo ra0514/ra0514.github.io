@@ -46,7 +46,7 @@ Pelota.prototype.sense=function(enviroment){
   this.sensor2.set(this.position,new THREE.Vector3(0,-1,0));
   var obstaculo4=this.sensor2.intersectObjects(enviroment.children,true);
   
-  if((obstaculo3.length>0 && (obstaculo3[0].distance <= 1)) || (obstaculo4.length>0 && (obstaculo4[0].distance <= 1)))
+  if((obstaculo3.length>0 && (obstaculo3[0].distance <= 0.1)) || (obstaculo4.length>0 && (obstaculo4[0].distance <= 0.1)))
   this.colision=1;
   else
   this.colision=0;
