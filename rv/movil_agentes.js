@@ -25,7 +25,8 @@ THREE.GeometryUtils.merge(forma,llanta2);
 
 Agent.call(this,x,y);
 this.add(new THREE.Mesh(forma,new THREE.MeshNormalMaterial()));
-this.step=0.1;
+this.stepx=0;
+this.stepy=0.1;
 this.colision=0;
 this.sensor=new THREE.Raycaster(this.position,new THREE.Vector3(1,0,0));
 }
@@ -44,16 +45,39 @@ Pelota.prototype.sense=function(enviroment){
   this.sensor.set(this.position,new THREE.Vector3(0,-1,0));
   var obstaculo4=this.sensor.intersectObjects(enviroment.children,true);
   
-  if((obstaculo1.length>0 && (obstaculo1[0].distance <= 2.5)) || (obstaculo2.length>0 && (obstaculo2[0].distance <= 2.5)))
+  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 3))
   this.colision=1;
   else
   this.colision=0;
+  
+  if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3))
+  this.colision=2;
+  else
+  this.colision=0;
+  
+  if(obstaculo3.length>0 && (obstaculo3[0].distance <= 3))
+  this.colision=3;
+  else
+  this.colision=0;
+  
+  if(obstaculo4.length>0 && (obstaculo4[0].distance <= 3))
+  this.colision=4;
+  else
+  this.colision=0;
+  
   };
   
   Pelota.prototype.act=function(enviroment){
-  if(this.colision==1)
-  this.step=-this.step;
-  this.position.x +=this.step;
+    
+  if(this.colision==3)
+  {
+  this.stepy=0;  
+  this.stepx=0.1;
+  }
+  
+  this.position.x +=this.stepx;
+  this.position.y +=this.stepy;
+  
   };
   
   function Pared(size,x=0,y=0){
