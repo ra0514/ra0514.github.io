@@ -51,7 +51,7 @@ Pelota.prototype.sense=function(enviroment){
   this.stepy=0;
   this.stepx=0.2;
   } 
-  
+  /*
   if(obstaculo1.length>0 && (obstaculo1[0].distance <= 3))
   {
   this.stepy=-0.2;
@@ -68,7 +68,7 @@ Pelota.prototype.sense=function(enviroment){
   {
   this.stepy=0.2;
   this.stepx=0;
-  } 
+  } */
   
   //this.colision=1;
   //else
