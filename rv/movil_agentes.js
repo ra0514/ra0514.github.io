@@ -38,6 +38,12 @@ Pelota.prototype.sense=function(enviroment){
   this.sensor.set(this.position,new THREE.Vector3(-1,0,0));
   var obstaculo2=this.sensor.intersectObjects(enviroment.children,true);
   
+  this.sensor.set(this.position,new THREE.Vector3(0,1,0));
+  var obstaculo2=this.sensor.intersectObjects(enviroment.children,true);
+  
+  this.sensor.set(this.position,new THREE.Vector3(0,-1,0));
+  var obstaculo2=this.sensor.intersectObjects(enviroment.children,true);
+  
   if((obstaculo1.length>0 && (obstaculo1[0].distance <= 1)) || (obstaculo2.length>0 && (obstaculo2[0].distance <= 1)))
   this.colision=1;
   else
@@ -67,7 +73,9 @@ Pelota.prototype.sense=function(enviroment){
   camara.position.z=60;
   
   entorno.add(new Pared(5,20,0));
-        entorno.add(new Pared(5,-20,0));
+    entorno.add(new Pared(5,-20,0));
+      entorno.add(new Pared(10,0,20));
+        entorno.add(new Pared(15,0,-20));
               entorno.add(new Pelota());
               entorno.add(camara);
               
