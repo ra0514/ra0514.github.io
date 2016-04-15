@@ -1,10 +1,32 @@
-function Pelota(r=0.5,x=0,y=0){
+function Pelota(x=0,y=0){
+
+var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
+var sujetador=new THREE.Mesh(new THREE.BoxGeometry(1,6,1));
+var abajo=new THREE.Mesh(new THREE.BoxGeometry(6,6,1));
+var llanta1=new THREE.Mesh(new THREE.CylinderGeometry(2,2,1,10));
+var llanta2=new THREE.Mesh(new THREE.CylinderGeometry(2,2,1,10));
+
+canon.position.y=0;
+sujetador.position.y=3;
+abajo.position.z=-1;
+llanta1.rotation.z=1.57;
+llanta2.rotation.z=1.57;
+llanta1.position.z=-1;
+llanta2.position.z=-1;
+llanta1.position.x=-3.5;
+llanta2.position.x=3.5;
+
+var forma=new THREE.Geometry();
+THREE.GeometryUtils.merge(forma,canon);
+THREE.GeometryUtils.merge(forma,sujetador);
+THREE.GeometryUtils.merge(forma,abajo);
+THREE.GeometryUtils.merge(forma,llanta1);
+THREE.GeometryUtils.merge(forma,llanta2);
+
 Agent.call(this,x,y);
-this.add(new THREE.Mesh(new THREE.SphereGeometry(r),
-                        new THREE.MeshNormalMaterial()));
+this.add(new THREE.Mesh(forma,new THREE.MeshNormalMaterial()));
 this.step=0.1;
 this.colision=0;
-this.radius=r;
 this.sensor=new THREE.Raycaster(this.position,new THREE.Vector3(1,0,0));
 }
 
@@ -42,9 +64,9 @@ Pelota.prototype.sense=function(enviroment){
   function setup(){
   entorno=new Enviroment();
   camara= new THREE.PerspectiveCamera();
-  camara.position.z=30;
+  camara.position.z=60;
   
-  entorno.add(new Pared(1,7,0));
+  entorno.add(new Pared(1,14,0));
     entorno.add(new Pared(1,-7,0));
       entorno.add(new Pared(1,7,1));
         entorno.add(new Pared(1,-7,1));
