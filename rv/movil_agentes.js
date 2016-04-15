@@ -1,4 +1,4 @@
-function Pelota(r,x=0,y=0){
+function Pelota(r=0.5,x=0,y=0){
 Agent.call(this,x,y);
 this.add(new THREE.Mesh(new THREE.SphereGeometry(r),
                         new THREE.MeshNormalMaterial()));
@@ -50,7 +50,7 @@ Pelota.prototype.sense=function(enviroment){
         entorno.add(new Pared(1,-7,1));
           entorno.add(new Pared(1,7,1));
             entorno.add(new Pared(1,7,-1));
-              entorno.add(new Pelota(0.5));
+              entorno.add(new Pelota());
               entorno.add(camara);
               
   renderer = new THREE.WebGLRenderer();
