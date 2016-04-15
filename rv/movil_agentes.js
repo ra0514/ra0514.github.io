@@ -47,19 +47,24 @@ Pelota.prototype.sense=function(enviroment){
   var obstaculo4=this.sensor.intersectObjects(enviroment.children,true);
   
   if((obstaculo3.length>0 && (obstaculo3[0].distance <= 3)) || (obstaculo4.length>0 && (obstaculo4[0].distance <= 3)))
-  this.colision=1;
-  else
-  this.colision=0;
+  {
+  this.stepy=0;
+  this.stepx=0.2;
+  } 
+  
+  //this.colision=1;
+  //else
+  //this.colision=0;
   
   };
   
   Pelota.prototype.act=function(enviroment){
-  if(this.colision==1)
-  {
-  this.stepy=0;
-  this.stepx=0.2;
-  //this.step=-this.step;
-  }  
+  //if(this.colision==1)
+  //{
+  //this.stepy=0;
+  //this.stepx=0.2;
+  //}  
+  
   this.position.x +=this.stepx;
   this.position.y +=this.stepy;
   
