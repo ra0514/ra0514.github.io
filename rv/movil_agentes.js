@@ -55,7 +55,7 @@ Pelota.prototype.sense=function(enviroment){
   
   Pelota.prototype.act=function(enviroment){
     
-  if(this.colision==3)
+  if(this.colision==1)
   {
   this.stepy=-this.stepy;
   }
