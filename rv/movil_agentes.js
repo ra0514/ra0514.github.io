@@ -29,7 +29,6 @@ this.stepx=0;
 this.stepy=0.1;
 this.colision=0;
 this.sensor=new THREE.Raycaster(this.position,new THREE.Vector3(1,0,0));
-this.sensor2=new THREE.Raycaster(this.position,new THREE.Vector3(0,1,0));
 }
 
 Pelota.prototype =new Agent();
@@ -52,7 +51,7 @@ Pelota.prototype.sense=function(enviroment){
   this.stepx=0.2;
   } 
   
-  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 3))
+  if(obstaculo1.length>0 && (obstaculo1[0].distance <= 0.1))
   {
   this.stepy=-0.2;
   this.stepx=0;
