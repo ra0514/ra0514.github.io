@@ -62,12 +62,12 @@ Pelota.prototype.sense=function(enviroment){
   this.stepy=0;
   this.stepx=-0.1;
   } 
-  
-  if(obstaculo2.length>0 && (obstaculo2[0].distance <= 3)&&(obstaculo3[0].distance >= 2))
+  /*
+  if(obstaculo2.length>0 && (obstaculo2[0].distance <= 2)&&(obstaculo3[0].distance >= 3))
   {
   this.stepy=0.1;
   this.stepx=0;
-  }
+  }*/
   
   //this.colision=1;
   //else
