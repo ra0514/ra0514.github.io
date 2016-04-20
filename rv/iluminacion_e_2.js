@@ -24,7 +24,7 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
-renderer.shadowMapEnable=true;
+renderer.shadowMapEnabled=true;
 malla.castShadow=true;
 base.receiveShadow=true;
 iluminacion.castShadow=true;
