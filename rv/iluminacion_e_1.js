@@ -6,7 +6,7 @@ malla=new THREE.Mesh(forma,material);
 malla.position.y+=2;
 malla.rotation.z+=0.25;
 
-var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),material);
+var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLamberMaterial({color:'#00cc00'}));
 
 var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 
