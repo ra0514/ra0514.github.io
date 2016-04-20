@@ -13,7 +13,7 @@ var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 escena=new THREE.Scene();
 escena.add(malla);
 escena.add(base);
-escena.add(luzPuntual);
+escena.add(iluminacion);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=15;
