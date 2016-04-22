@@ -1,7 +1,7 @@
 function setup(){
-var material2 = new THREE.MeshBasicMaterial();
 var material1 = new THREE.MeshLambertMaterial({color:'#ffffff'});
-  
+var material2 = new THREE.MeshBasicMaterial();
+
 cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),material2);
 cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),material1);
 
@@ -112,6 +112,7 @@ requestAnimationFrame(loop);
 var cubo1,cubo2,cubo3,cubo4,pelota,escena,camara,renderer;
 var raycaster1,raycaster2,raycaster3,raycaster4,step;
 var obstaculo1,obstaculo2,obstaculo3,obstaculo4;
+var material1,material2;
 
 setup();
 loop();
