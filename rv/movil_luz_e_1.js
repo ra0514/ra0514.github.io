@@ -76,7 +76,7 @@ if((obstaculo3.length>0 && (obstaculo3[0].distance<=5)))
 {stepy=0;
 pelota.rotation.z=-1.57;
 stepx=0.2;
-material1=material2;
+cubo3=new THREE.Mesh(new THREE.BoxGeometry(40,1,5),material2);
 };
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=5)))
