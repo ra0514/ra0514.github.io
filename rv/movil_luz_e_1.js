@@ -1,6 +1,6 @@
 function setup(){
-var material1 = new THREE.MeshLambertMaterial({color:'#ffffff'});
-var material2 = new THREE.MeshBasicMaterial();
+material1 = new THREE.MeshLambertMaterial({color:'#ffffff'});
+material2 = new THREE.MeshBasicMaterial();
 
 cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),material2);
 cubo2=new THREE.Mesh(new THREE.BoxGeometry(1,40,5),material1);
