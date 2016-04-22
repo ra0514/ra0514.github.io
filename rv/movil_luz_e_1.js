@@ -76,7 +76,7 @@ if((obstaculo3.length>0 && (obstaculo3[0].distance<=5)))
 {stepy=0;
 pelota.rotation.z=-1.57;
 stepx=0.2;
-cubo1.color=0x00cc00;
+material2.color=0x00cc00;
 };
 
 if((obstaculo1.length>0 && (obstaculo1[0].distance<=5)))
