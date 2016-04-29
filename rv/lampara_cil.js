@@ -1,15 +1,16 @@
 function setup(){
 var forma=new THREE.CylinderGeometry(1,1,2);
-var material=new THREE.MeshLambertMaterial({color:'#00cc00'});
+var material=new THREE.MeshLambertMaterial({color:'#0000cc'});
 malla=new THREE.Mesh(forma,material);
 
 malla.position.y+=2;
 
 var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:'#00cc00'}));
-var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#00cc00'}));
-var muro2=new THREE.Mesh(new THREE.BoxGeometry(.1,5,5),new THREE.MeshLambertMaterial({color:'#00cc00'}));
+var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#cccc00'}));
+var muro2=new THREE.Mesh(new THREE.BoxGeometry(.1,5,5),new THREE.MeshLambertMaterial({color:'#00cccc'}));
 
-muro2.position.x=-5;
+muro1.position.z=2.5;
+muro2.position.x=-2.5;
 
 var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 
