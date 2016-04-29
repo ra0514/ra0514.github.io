@@ -38,6 +38,14 @@ camara.position.y=5;
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
+
+
+renderer.shadowMapEnabled=true;
+malla.castShadow=true;
+base.receiveShadow=true;
+muro1.receiveShadow=true;
+muro2.receiveShadow=true;
+iluminacion.castShadow=true;
 }
 
 function loop(){
