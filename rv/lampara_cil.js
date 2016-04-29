@@ -2,7 +2,7 @@ function setup(){
 THREE.ImageUtils.crossOrigin='';
 var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 var forma=new THREE.CylinderGeometry(1,1,2);
-var material=new THREE.MeshLambertMaterial({map:textura});
+var material=new THREE.MeshLambertMaterial({map:textura,alphaMap:'#000000'});
 malla=new THREE.Mesh(forma,material);
 
 malla.position.y=2;
@@ -17,7 +17,6 @@ muro1.position.y=2.5;
 muro2.position.y=2.5;
 
 //var iluminacion=new THREE.AmbientLight(0xFFFFFF);
-
 
 var luzPuntual=new THREE.PointLight(0xFFFFFF);
 //luzPuntual.position.x=10;
@@ -42,9 +41,9 @@ document.body.appendChild(renderer.domElement);
 
 renderer.shadowMapEnabled=true;
 malla.castShadow=true;
-base.receiveShadow=true;
+//base.receiveShadow=true;
 muro1.receiveShadow=true;
-muro2.receiveShadow=true;
+//muro2.receiveShadow=true;
 luzPuntual.castShadow=true;
 }
 
