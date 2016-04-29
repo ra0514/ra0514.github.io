@@ -1,6 +1,8 @@
 function setup(){
+THREE.ImageUtils.crossOrigin='';
+var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 var forma=new THREE.CylinderGeometry(1,1,2);
-var material=new THREE.MeshLambertMaterial({color:'#0000cc'});
+var material=new THREE.MeshLambertMaterial({map:textura});
 malla=new THREE.Mesh(forma,material);
 
 malla.position.y+=2;
