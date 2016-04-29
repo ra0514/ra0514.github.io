@@ -5,7 +5,7 @@ var forma=new THREE.CylinderGeometry(1,1,2);
 var material=new THREE.MeshLambertMaterial({map:textura});
 malla=new THREE.Mesh(forma,material);
 
-malla.position.y+=2;
+malla.position.y=2;
 
 var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:'#00cc00'}));
 var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#cccc00'}));
@@ -21,7 +21,7 @@ muro2.position.y=2.5;
 
 var luzPuntual=new THREE.PointLight(0xFFFFFF);
 //luzPuntual.position.x=10;
-luzPuntual.position.y=1;
+luzPuntual.position.y=2;
 //luzPuntual.position.z=10;
 
 escena=new THREE.Scene();
