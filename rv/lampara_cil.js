@@ -16,20 +16,20 @@ muro2.position.x=-2.5;
 muro1.position.y=2.5;
 muro2.position.y=2.5;
 
-var iluminacion=new THREE.AmbientLight(0xFFFFFF);
+//var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 
 
 var luzPuntual=new THREE.PointLight(0xcc00cc);
-luzPuntual.position.x=10;
-luzPuntual.position.y=10;
-luzPuntual.position.z=10;
+//luzPuntual.position.x=10;
+luzPuntual.position.y=1;
+//luzPuntual.position.z=10;
 
 escena=new THREE.Scene();
 escena.add(malla);
 escena.add(base);
 escena.add(muro1);
 escena.add(muro2);
-escena.add(iluminacion);
+escena.add(luzPuntual);
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=15;
