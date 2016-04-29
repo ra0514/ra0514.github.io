@@ -1,12 +1,14 @@
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-var textura = THREE.ImageUtils.loadTexture('http://previews.123rf.com/images/innkey/innkey1302/innkey130200085/18089093-Textura-transparente-lineal-con-la-mano-las-hojas-sin-fin-ornamental-elaborado-plantilla-patr-n-negr-Foto-de-archivo.jpg');
-//var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
+//var textura = THREE.ImageUtils.loadTexture('http://previews.123rf.com/images/innkey/innkey1302/innkey130200085/18089093-Textura-transparente-lineal-con-la-mano-las-hojas-sin-fin-ornamental-elaborado-plantilla-patr-n-negr-Foto-de-archivo.jpg');
+var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 var forma=new THREE.CylinderGeometry(1,1,2);
 var material=new THREE.MeshLambertMaterial({map:textura,reflectivity:0});
 malla=new THREE.Mesh(forma,material);
 
 malla.position.y=2;
+
+malla.material.transparent=true;
 
 var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:'#00cc00'}));
 var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#cccc00'}));
