@@ -9,8 +9,10 @@ var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMater
 var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#cccc00'}));
 var muro2=new THREE.Mesh(new THREE.BoxGeometry(.1,5,5),new THREE.MeshLambertMaterial({color:'#00cccc'}));
 
-muro1.position.z=2.5;
+muro1.position.z=-2.5;
 muro2.position.x=-2.5;
+muro1.position.y=2.5;
+muro2.position.y=2.5;
 
 var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 
