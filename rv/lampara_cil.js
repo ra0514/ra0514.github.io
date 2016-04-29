@@ -19,7 +19,7 @@ muro2.position.y=2.5;
 //var iluminacion=new THREE.AmbientLight(0xFFFFFF);
 
 
-var luzPuntual=new THREE.PointLight(0xcc00cc);
+var luzPuntual=new THREE.PointLight(0xFFFFFF);
 //luzPuntual.position.x=10;
 luzPuntual.position.y=1;
 //luzPuntual.position.z=10;
