@@ -16,12 +16,9 @@ muro2.position.x=-2.5;
 muro1.position.y=2.5;
 muro2.position.y=2.5;
 
-//var iluminacion=new THREE.AmbientLight(0xFFFFFF);
-
 var luzPuntual=new THREE.PointLight(0xFFFFFF);
-//luzPuntual.position.x=10;
 luzPuntual.position.y=2;
-//luzPuntual.position.z=10;
+luzPuntual.position.z=2.5;
 
 escena=new THREE.Scene();
 escena.add(malla);
