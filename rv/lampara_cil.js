@@ -9,7 +9,7 @@ malla=new THREE.Mesh(forma,material);
 malla.position.y=2;
 
 malla.material.transparent=true;
-malla.material.opacity=0.3;
+malla.material.opacity=0.5;
 
 var base=new THREE.Mesh(new THREE.BoxGeometry(5,.1,5),new THREE.MeshLambertMaterial({color:'#00cc00'}));
 var muro1=new THREE.Mesh(new THREE.BoxGeometry(5,5,.1),new THREE.MeshLambertMaterial({color:'#cccc00'}));
@@ -42,9 +42,7 @@ document.body.appendChild(renderer.domElement);
 
 renderer.shadowMapEnabled=true;
 malla.castShadow=true;
-//base.receiveShadow=true;
 muro1.receiveShadow=true;
-//muro2.receiveShadow=true;
 luzPuntual.castShadow=true;
 }
 
