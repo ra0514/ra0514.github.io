@@ -45,7 +45,7 @@ malla.castShadow=true;
 base.receiveShadow=true;
 muro1.receiveShadow=true;
 muro2.receiveShadow=true;
-iluminacion.castShadow=true;
+luzPuntual.castShadow=true;
 }
 
 function loop(){
