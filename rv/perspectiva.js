@@ -33,6 +33,17 @@ window.onload = function() {
   document.onkeydown = muestraInformacion;
 }
 
+function muestraInformacion(elEvento) {
+  var evento = window.event || elEvento;
+ 
+  var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+                "Propiedad keyCode: " + evento.keyCode + "<br>" +
+                "Propiedad charCode: " + evento.charCode + "<br>" +
+                "Carácter pulsado: " + String.fromCharCode(evento.charCode);
+ 
+  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+}
+
 function loop(){
 requestAnimationFrame(loop);
 
@@ -47,4 +58,5 @@ else {
 
 var camara,camara2,camara3,escena,renderer,malla;
 setup();
+muestraInformacion();
 loop();
