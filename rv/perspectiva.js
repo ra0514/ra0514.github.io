@@ -46,7 +46,7 @@ requestAnimationFrame(loop);
 if(sel==1)
 renderer.render(escena,camara2);
 else
-renderer.render(escena,camara4);
+renderer.render(escena,camara3);
 
 
 }
