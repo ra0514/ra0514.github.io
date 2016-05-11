@@ -10,6 +10,17 @@ malla.rotation.z=0.75;
 escena=new THREE.Scene();
 escena.add(malla);
 
+
+var tipo_evento='onKeyDown';
+var listener= function ( event ) {
+  if( event.keyCode == 112)
+  sel=1;
+  else
+  sel=2;
+}
+
+
+
 camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
 
@@ -32,28 +43,15 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 
-var keyCode
-function tecla(e){
-if(window.event)
-{
-  keyCode=window.event.keyCode;
-  sel=1;
-}
-else if(e){
-  keyCode=e.which;
-  sel=0;
-}
-alert(keyCode)
-}
-
-if(sel==1)
-renderer.render(escena,camara2);
-else
+ if( sel==1)
 renderer.render(escena,camara3);
+else
+renderer.render(escena,camara2);
 
 
 }
 
-var camara,camara2,camara3,escena,renderer,malla,keyCode,sel;
+var camara,camara2,camara3,escena,renderer,malla;
+var sel;
 setup();
 loop();
