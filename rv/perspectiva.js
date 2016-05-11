@@ -27,6 +27,11 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
+
+
+function loop(){
+requestAnimationFrame(loop);
+
 var keyCode
 function tecla(e){
 if(window.event)
@@ -41,8 +46,6 @@ else if(e){
 alert(keyCode)
 }
 
-function loop(){
-requestAnimationFrame(loop);
 if(sel==1)
 renderer.render(escena,camara2);
 else
