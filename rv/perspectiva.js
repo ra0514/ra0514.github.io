@@ -27,22 +27,21 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-
-
-function loop(){
-requestAnimationFrame(loop);
-
 var keyCode
 function tecla(e){
 if(window.event)
 {keyCode=window.event.keyCode;
-renderer.render(escena,camara2);
 }
-else if(e){ keyCode=e.which;
-  renderer.render(escena,camara3);
+else if(e){
+  keyCode=e.which;
 }
 alert(keyCode)
 }
+
+function loop(){
+requestAnimationFrame(loop);
+renderer.render(escena,camara2);
+
 
 }
 
