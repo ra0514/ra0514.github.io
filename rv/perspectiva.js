@@ -27,36 +27,25 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-window.onload = function() {
-  document.onkeyup = muestraInformacion;
-  document.onkeypress = muestraInformacion;
-  document.onkeydown = muestraInformacion;
-}
 
-function muestraInformacion(elEvento) {
-  var evento = window.event || elEvento;
- 
-  var mensaje = "Tipo de evento: " + evento.type + "<br>" +
-                "Propiedad keyCode: " + evento.keyCode + "<br>" +
-                "Propiedad charCode: " + evento.charCode + "<br>" +
-                "Carácter pulsado: " + String.fromCharCode(evento.charCode);
- 
-  info.innerHTML += "<br>--------------------------------------<br>" + mensaje
-}
 
 function loop(){
 requestAnimationFrame(loop);
 
-if(evento.altKey) {
-  renderer.render(escena,camara2);
+var keyCode
+function tecla(e){
+if(window.event)
+{keyCode=window.event.keyCode;
+renderer.render(escena,camara2);
 }
-else {
+else if(e){ keyCode=e.which;
   renderer.render(escena,camara3);
 }
-  
+alert(keyCode)
 }
 
-var camara,camara2,camara3,escena,renderer,malla;
+}
+
+var camara,camara2,camara3,escena,renderer,malla,keyCode;
 setup();
-muestraInformacion();
 loop();
