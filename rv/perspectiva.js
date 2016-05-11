@@ -27,9 +27,22 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
+window.onload = function() {
+  document.onkeyup = muestraInformacion;
+  document.onkeypress = muestraInformacion;
+  document.onkeydown = muestraInformacion;
+}
+
 function loop(){
 requestAnimationFrame(loop);
-renderer.render(escena,camara3);
+
+if(evento.altKey) {
+  renderer.render(escena,camara2);
+}
+else {
+  renderer.render(escena,camara3);
+}
+  
 }
 
 var camara,camara2,camara3,escena,renderer,malla;
