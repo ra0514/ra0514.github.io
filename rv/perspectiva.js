@@ -30,21 +30,27 @@ document.body.appendChild(renderer.domElement);
 var keyCode
 function tecla(e){
 if(window.event)
-{keyCode=window.event.keyCode;
+{
+  keyCode=window.event.keyCode;
+  sel=1;
 }
 else if(e){
-  keyCode=e.which;
+  keyCode=e.which;}
+  sel=0;
 }
 alert(keyCode)
 }
 
 function loop(){
 requestAnimationFrame(loop);
+if(sel==1)
 renderer.render(escena,camara2);
+else
+renderer.render(escena,camara4);
 
 
 }
 
-var camara,camara2,camara3,escena,renderer,malla,keyCode;
+var camara,camara2,camara3,escena,renderer,malla,keyCode,sel;
 setup();
 loop();
