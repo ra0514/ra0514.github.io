@@ -1,6 +1,6 @@
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-var textura = THREE.ImageUtils.loadTexture('http://www.clairvision.org/ckb/ckbr/ckbi/fol_0000_0001/cat_0000_0001/imagfile_0000_0000_0000_2000_0000_0000_0220_0085.gif');
+var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
 var material=new THREE.MeshBasicMaterial({map:textura});
 var forma=new THREE.BoxGeometry(1,1,1);
 malla=new THREE.Mesh(forma,material);
