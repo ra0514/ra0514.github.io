@@ -18,7 +18,7 @@ var listener= function ( event ) {
   else
   sel=2;
 }
-
+window.addEventListener(tipo_evento,listener, false );
 
 
 camara=new THREE.PerspectiveCamera();
