@@ -32,6 +32,6 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara3);
 }
 
-var camara,camara2,escena,renderer,malla;
+var camara,camara2,camara3,escena,renderer,malla;
 setup();
 loop();
