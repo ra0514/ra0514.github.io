@@ -1,6 +1,6 @@
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-var textura = THREE.ImageUtils.loadTexture('http://www.cifreceramica.com/es/download/file/1620/MOSAICO%20MIKONOS_30x30');
+var textura = THREE.ImageUtils.loadTexture('http://www.clairvision.org/ckb/ckbr/ckbi/fol_0000_0001/cat_0000_0001/imagfile_0000_0000_0000_2000_0000_0000_0220_0085.gif');
 var material=new THREE.MeshBasicMaterial({map:textura});
 var forma=new THREE.BoxGeometry(10,10,1);
 malla=new THREE.Mesh(forma,material);
