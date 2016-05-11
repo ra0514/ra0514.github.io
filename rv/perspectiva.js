@@ -11,7 +11,7 @@ escena.add(malla);
 camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
 
-camara2 = new THREE.OrthographicCamera( 5 / - 2, 5 / 2, 5 / 2, 5 / - 2, 1, 1000 );
+camara2 = new THREE.OrthographicCamera( 5 / - 2, 5 / 2, 8 / 2, 8 / - 2, 1, 1000 );
 camara2.position.z=5;
 camara2.position.x=5;
 
