@@ -4,6 +4,8 @@ var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
 var material=new THREE.MeshBasicMaterial({map:textura});
 var forma=new THREE.BoxGeometry(1,1,0.1);
 malla=new THREE.Mesh(forma,material);
+malla.rotation.z=0.75;
+
 
 escena=new THREE.Scene();
 escena.add(malla);
