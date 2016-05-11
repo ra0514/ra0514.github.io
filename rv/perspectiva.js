@@ -18,7 +18,7 @@ camara2.position.z=5;
 camara2.position.x=1;
 
 //5 sobre 8 es ancho contra altura
-camera3 = new THREE.PerspectiveCamera( 45, 5 / 8, 1, 1000 );
+camara3 = new THREE.PerspectiveCamera( 45, 5 / 8, 1, 1000 );
 camara3.position.z=5;
 camara3.position.x=1;
 
