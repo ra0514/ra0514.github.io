@@ -35,7 +35,7 @@ if(window.event)
   sel=1;
 }
 else if(e){
-  keyCode=e.which;}
+  keyCode=e.which;
   sel=0;
 }
 alert(keyCode)
