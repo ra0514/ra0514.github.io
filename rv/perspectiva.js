@@ -10,17 +10,6 @@ malla.rotation.z=0.75;
 escena=new THREE.Scene();
 escena.add(malla);
 
-
-var tipo_evento='onKeyDown';
-var listener= function ( event ) {
-  if( event.keyCode == 112)
-  sel=1;
-  else
-  sel=2;
-}
-window.addEventListener(tipo_evento,listener, false );
-
-
 camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
 
@@ -37,6 +26,8 @@ escena.add(camara);
 escena.add(camara2);
 escena.add(camara3);
 
+var teclado = new THREEx.KeyboardState();
+
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
@@ -47,15 +38,17 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 
- if( sel==1)
+if (keyboard.pressed("P")) {
 renderer.render(escena,camara3);
+}
 else
+{
 renderer.render(escena,camara2);
+}
 
 
 }
 
 var camara,camara2,camara3,escena,renderer,malla;
-var sel;
 setup();
 loop();
