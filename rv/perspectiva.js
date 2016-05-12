@@ -1,4 +1,4 @@
-var teclado = new THREEx.KeyboardState();
+var keyboard = new THREEx.KeyboardState();
 
 function setup(){
 THREE.ImageUtils.crossOrigin='';
