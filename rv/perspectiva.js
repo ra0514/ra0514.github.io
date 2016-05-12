@@ -2,13 +2,13 @@ var keyboard = new THREEx.KeyboardState();
 
 function setup(){
 THREE.ImageUtils.crossOrigin='';
-//var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
-var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
+var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
+//var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/crate.gif');
 var material=new THREE.MeshBasicMaterial({map:textura});
 var forma=new THREE.BoxGeometry(1,1,0.5);
 malla=new THREE.Mesh(forma,material);
 malla.rotation.z=0.75;
-malla.rotation.x=0.4;
+malla.rotation.x=-0.4;
 
 
 escena=new THREE.Scene();
