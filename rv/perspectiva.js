@@ -1,3 +1,5 @@
+var teclado = new THREEx.KeyboardState();
+
 function setup(){
 THREE.ImageUtils.crossOrigin='';
 var textura = THREE.ImageUtils.loadTexture('mosaico.jpg');
@@ -26,8 +28,6 @@ escena.add(camara);
 escena.add(camara2);
 escena.add(camara3);
 
-var teclado = new THREEx.KeyboardState();
-
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
@@ -36,7 +36,7 @@ document.body.appendChild(renderer.domElement);
 
 
 function loop(){
-requestAnimationFrame(loop);
+
 
 if (keyboard.pressed("P")) {
 renderer.render(escena,camara3);
@@ -45,7 +45,7 @@ else
 {
 renderer.render(escena,camara2);
 }
-
+requestAnimationFrame(loop);
 
 }
 
