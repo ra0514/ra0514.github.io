@@ -28,16 +28,16 @@ llanta2.position.z=-1;
 llanta1.position.x=-3.5;
 llanta2.position.x=3.5;
 
-var forma=new THREE.Geometry();
+var formac=new THREE.Geometry();
 
-THREE.GeometryUtils.merge(forma,canon);
-THREE.GeometryUtils.merge(forma,sujetador);
-THREE.GeometryUtils.merge(forma,abajo);
-THREE.GeometryUtils.merge(forma,llanta1);
-THREE.GeometryUtils.merge(forma,llanta2);
+THREE.GeometryUtils.merge(formac,canon);
+THREE.GeometryUtils.merge(formac,sujetador);
+THREE.GeometryUtils.merge(formac,abajo);
+THREE.GeometryUtils.merge(formac,llanta1);
+THREE.GeometryUtils.merge(formac,llanta2);
 
-mallat=new THREE.Mesh(forma);
-
+mallat=new THREE.Mesh(formac);
+mallat.scale.set( 0.2, 0.2, 0.2 );
 
 escena=new THREE.Scene();
 escena.add(malla);
