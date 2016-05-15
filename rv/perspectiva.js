@@ -37,7 +37,10 @@ THREE.GeometryUtils.merge(formac,llanta1);
 THREE.GeometryUtils.merge(formac,llanta2);
 
 mallat=new THREE.Mesh(formac);
-mallat.scale.set( 0.2, 0.2, 0.2 );
+mallat.position.z=1;
+mallat.rotation.z=0.75;
+mallat.rotation.x=-0.4;
+mallat.scale.set( 0.1, 0.1, 0.1 );
 
 escena=new THREE.Scene();
 escena.add(malla);
