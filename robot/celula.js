@@ -33,6 +33,7 @@ uno.position.y=posiciones[3];
 
 var escena,camara,renderer;
 var incremento;
+var uno,dos,tres;
 
 setup();
 loop();
