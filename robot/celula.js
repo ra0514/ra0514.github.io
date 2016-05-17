@@ -26,15 +26,15 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 requestAnimationFrame(loop);
 
-uno.rotation+=0.1;
-//uno.position.y=posiciones[3];
+//uno.rotation+=0.01;
+uno.position.y=posiciones[3];
 
 renderer.render(escena,camara);
 }
 
 var escena,camara,renderer;
 var incremento;
-var uno,dos,tres;
+//var uno,dos,tres;
 
 setup();
 loop();
