@@ -33,9 +33,7 @@ renderer.render(escena,camara);
 }
 
 var escena,camara,renderer;
-//var posiciones;
 var incremento;
-//var uno,dos,tres;
 
 setup();
 loop();
