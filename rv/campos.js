@@ -111,7 +111,7 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
-OBJETIVOX=50;
+OBJETIVOX=10;
 OBJETIVOY=50;
 
 stepy=0.2;
