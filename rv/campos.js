@@ -120,30 +120,30 @@ stepx=0.2;
 
 function loop(){
 //todos los posibles obstaculos
-obstaculo1D=raycaster1.intersectObject(cubo1);
-obstaculo1I=raycaster2.intersectObject(cubo1);
-obstaculo1U=raycaster3.intersectObject(cubo1);
-obstaculo1DD=raycaster4.intersectObject(cubo1);
+obstaculo1D=raycaster1.intersectObject(pared1);
+obstaculo1I=raycaster2.intersectObject(pared1);
+obstaculo1U=raycaster3.intersectObject(pared1);
+obstaculo1DD=raycaster4.intersectObject(pared1);
 
-obstaculo2D=raycaster1.intersectObject(cubo2);
-obstaculo2I=raycaster2.intersectObject(cubo2);
-obstaculo2U=raycaster3.intersectObject(cubo2);
-obstaculo2DD=raycaster4.intersectObject(cubo2);
+obstaculo2D=raycaster1.intersectObject(pared2);
+obstaculo2I=raycaster2.intersectObject(pared2);
+obstaculo2U=raycaster3.intersectObject(pared2);
+obstaculo2DD=raycaster4.intersectObject(pared2);
 
-obstaculo3D=raycaster1.intersectObject(cubo3);
-obstaculo3I=raycaster2.intersectObject(cubo3);
-obstaculo3U=raycaster3.intersectObject(cubo3);
-obstaculo3DD=raycaster4.intersectObject(cubo3);
+obstaculo3D=raycaster1.intersectObject(pared3);
+obstaculo3I=raycaster2.intersectObject(pared3);
+obstaculo3U=raycaster3.intersectObject(pared3);
+obstaculo3DD=raycaster4.intersectObject(pared3);
 
-obstaculo4D=raycaster1.intersectObject(cubo4);
-obstaculo4I=raycaster2.intersectObject(cubo4);
-obstaculo4U=raycaster3.intersectObject(cubo4);
-obstaculo4DD=raycaster4.intersectObject(cubo4);
+obstaculo4D=raycaster1.intersectObject(pared4);
+obstaculo4I=raycaster2.intersectObject(pared4);
+obstaculo4U=raycaster3.intersectObject(pared4);
+obstaculo4DD=raycaster4.intersectObject(pared4);
 
-obstaculo5D=raycaster1.intersectObject(cubo5);
-obstaculo5I=raycaster2.intersectObject(cubo5);
-obstaculo5U=raycaster3.intersectObject(cubo5);
-obstaculo5DD=raycaster4.intersectObject(cubo5);
+obstaculo5D=raycaster1.intersectObject(pared5);
+obstaculo5I=raycaster2.intersectObject(pared5);
+obstaculo5U=raycaster3.intersectObject(pared5);
+obstaculo5DD=raycaster4.intersectObject(pared5);
 
 if(pelota.position.y<OBJETIVOY)
 stepy=0.2;
