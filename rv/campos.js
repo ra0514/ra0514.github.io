@@ -111,8 +111,11 @@ renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
-OBJETIVOX=10;
-OBJETIVOY=20;
+//seleccionar objetivo
+OBJETIVOX=-20;
+OBJETIVOY=10;
+//OBJETIVOX=10;
+//OBJETIVOY=20;
 
 stepy=0.2;
 stepx=0.2;
