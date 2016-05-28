@@ -243,6 +243,8 @@ a5=0;
 stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2)-(c3*a3)-(c4*a4)-(c5*a5);
 stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*b1)-(c2*b2)-(c3*b3)-(c4*b4)-(c5*b5);
 
+if((((OBJETIVOY-pelota.position.y)*(OBJETIVOY-pelota.position.y))<2)&&(((OBJETIVOY-pelota.position.y)*(OBJETIVOY-pelota.position.y))<2))
+pelota.material= new  THREE.MeshBasicMaterial({color:'#0000ff'});
 
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
