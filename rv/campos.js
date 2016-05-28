@@ -77,7 +77,7 @@ pelota.scale.y=0.5;
 
 //+++++++++++++++++++++++++++++
 camara=new THREE.PerspectiveCamera();
-camara.position.z=100;
+camara.position.z=60;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
@@ -90,7 +90,7 @@ pelota.add(luzconica);
 luzconica.position.set(-5,-5,0);
 luzconica.target = pelota;
 //luzconica.position.set( -5,-5,0);
-luzconica.intensity = 0.5;
+luzconica.intensity = 1;
 //------------
 
 escena=new THREE.Scene();
