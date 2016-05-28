@@ -134,6 +134,7 @@ b2=0;
 b3=0;
 b4=0;
 b5=0;
+ajuste=0;
 }
 
 function loop(){
@@ -251,7 +252,13 @@ pelota.material= new  THREE.MeshBasicMaterial({color:'#0000ff'});
 
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
-pelota.rotation.z=Math.atan(stepy/stepx)-1.57;
+
+if(stepx<0)
+ajuste=1;
+
+pelota.rotation.z=Math.atan(stepy/stepx)-1.57+(3.14*ajuste);
+
+ajuste=0;
 
 //sensores
 raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
