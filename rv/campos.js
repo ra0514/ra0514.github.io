@@ -145,6 +145,29 @@ obstaculo5I=raycaster2.intersectObject(pared5);
 obstaculo5U=raycaster3.intersectObject(pared5);
 obstaculo5DD=raycaster4.intersectObject(pared5);
 
+//iluminar cubos
+if((obstaculo1D.length>0 && (obstaculo1D[0].distance<=5))||(obstaculo1I.length>0 && (obstaculo1I[0].distance<=5))||(obstaculo1U.length>0 && (obstaculo1U[0].distance<=5))||(obstaculo1DD.length>0 && (obstaculo1DD[0].distance<=5)))
+{
+pared1.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+};
+if((obstaculo2D.length>0 && (obstaculo2D[0].distance<=5))||(obstaculo2I.length>0 && (obstaculo2I[0].distance<=5))||(obstaculo2U.length>0 && (obstaculo2U[0].distance<=5))||(obstaculo2DD.length>0 && (obstaculo2DD[0].distance<=5)))
+{
+pared2.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+};
+if((obstaculo3D.length>0 && (obstaculo3D[0].distance<=5))||(obstaculo3I.length>0 && (obstaculo3I[0].distance<=5))||(obstaculo3U.length>0 && (obstaculo3U[0].distance<=5))||(obstaculo3DD.length>0 && (obstaculo3DD[0].distance<=5)))
+{
+pared3.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+};
+if((obstaculo4D.length>0 && (obstaculo4D[0].distance<=5))||(obstaculo4I.length>0 && (obstaculo4I[0].distance<=5))||(obstaculo4U.length>0 && (obstaculo4U[0].distance<=5))||(obstaculo4DD.length>0 && (obstaculo4DD[0].distance<=5)))
+{
+pared4.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+};
+if((obstaculo5D.length>0 && (obstaculo5D[0].distance<=5))||(obstaculo5I.length>0 && (obstaculo5I[0].distance<=5))||(obstaculo5U.length>0 && (obstaculo5U[0].distance<=5))||(obstaculo5DD.length>0 && (obstaculo5DD[0].distance<=5)))
+{
+pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+};
+
+
 if(pelota.position.y<OBJETIVOY)
 stepy=0.2;
 else
