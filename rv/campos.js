@@ -194,25 +194,25 @@ a1=(pared1.position.y-pelota.position.y)/((pared1.position.y-pelota.position.y)*
 b1=(pared1.position.x-pelota.position.x)/((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x));
 };
 
-if(((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>3&&(((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x))>3))
+if((((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>3)&&(((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x))>3))
 {
 a2=(pared2.position.y-pelota.position.y)/((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y));
 b2=(pared2.position.x-pelota.position.x)/((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x));
 };
 
-if(((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>3&&(((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x))>3))
+if((((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>3)&&(((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x))>3))
 {
 a3=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
 b3=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
 };
 
-if(((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>3&&(((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x))>3))
+if((((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>4)&&(((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x))>4))
 {
 a4=(pared4.position.y-pelota.position.y)/((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y));
 b4=(pared4.position.x-pelota.position.x)/((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x));
 };
 
-if(((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>3&&(((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x))>3))
+if((((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>5)&&(((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x))>5))
 {
 a5=(pared5.position.y-pelota.position.y)/((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y));
 b5=(pared5.position.x-pelota.position.x)/((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x));
