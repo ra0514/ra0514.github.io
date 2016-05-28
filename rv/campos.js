@@ -112,10 +112,10 @@ renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 
 //seleccionar objetivo
-OBJETIVOX=-20;
-OBJETIVOY=20;
-//OBJETIVOX=10;
+//OBJETIVOX=-20;
 //OBJETIVOY=20;
+OBJETIVOX=10;
+OBJETIVOY=20;
 
 stepy=0.2;
 stepx=0.2;
