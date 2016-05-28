@@ -188,35 +188,57 @@ pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
 //campos de obstaculos
-if((((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y))>3)&&(((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x))>3))
+if((((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y))>3)&&(((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x))>2))
 {
 a1=(pared1.position.y-pelota.position.y)/((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y));
 b1=(pared1.position.x-pelota.position.x)/((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x));
 };
 
-if((((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>3)&&(((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x))>3))
+if((((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>3)&&(((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x))>2))
 {
 a2=(pared2.position.y-pelota.position.y)/((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y));
 b2=(pared2.position.x-pelota.position.x)/((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x));
 };
 
-if((((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>3)&&(((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x))>3))
+if((((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>3)&&(((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x))>2))
 {
 a3=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
 b3=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
 };
 
-if((((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>4)&&(((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x))>4))
+if((((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>4)&&(((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x))>2))
 {
 a4=(pared4.position.y-pelota.position.y)/((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y));
 b4=(pared4.position.x-pelota.position.x)/((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x));
 };
 
-if((((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>5)&&(((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x))>5))
+if((((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>5)&&(((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x))>2))
 {
 a5=(pared5.position.y-pelota.position.y)/((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y));
 b5=(pared5.position.x-pelota.position.x)/((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x));
 };
+
+if(((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y))>4)
+a1=0;
+if(((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>4)
+a2=0;
+if(((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>4)
+a3=0;
+if(((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>4)
+a4=0;
+if(((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>4)
+a5=0;
+
+if(((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x))>4)
+b1=0;
+if(((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x))>4)
+b2=0;
+if(((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x))>4)
+b3=0;
+if(((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x))>4)
+b4=0;
+if(((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x))>4)
+b5=0;
 
 stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2)-(c3*a3)-(c4*a4)-(c5*a5);
 stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*b1)-(c2*b2)-(c3*b3)-(c4*b4)-(c5*b5);
