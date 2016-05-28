@@ -70,9 +70,9 @@ pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 pelota.position.x=0;
 pelota.position.y=-22;
 
-pelota.scale.x=0.5;
-pelota.scale.z=0.5;
-pelota.scale.y=0.5;
+pelota.scale.x=0.3;
+pelota.scale.z=0.3;
+pelota.scale.y=0.3;
 
 
 //+++++++++++++++++++++++++++++
