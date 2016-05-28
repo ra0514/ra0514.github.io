@@ -116,6 +116,11 @@ OBJETIVOY=20;
 
 stepy=0.2;
 stepx=0.2;
+c1=0;
+c2=0;
+c3=0;
+c4=0;
+c5=0;
 }
 
 function loop(){
@@ -167,17 +172,8 @@ if((obstaculo5D.length>0 && (obstaculo5D[0].distance<=5))||(obstaculo5I.length>0
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-
-if(pelota.position.y<OBJETIVOY)
-stepy=0.2;
-else
-stepy=-0.2;
-
-
-if(pelota.position.x<OBJETIVOX)
-stepx=0.2;
-else
-stepx=-0.2;
+stepy=OBJETIVOY-pelota.position.y;
+stepx=OBJETIVOX-pelota.position.x;
 
 
 pelota.position.y +=stepy;
