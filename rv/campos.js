@@ -218,7 +218,7 @@ a5=(pared5.position.y-pelota.position.y)/((pared5.position.y-pelota.position.y)*
 b5=(pared5.position.x-pelota.position.x)/((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x));
 };
 
-stepy=((OBJETIVOY-pelota.position.y)/100);
+stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2);
 stepx=((OBJETIVOX-pelota.position.x)/100);
 //stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2)-(c3*a3)-(c4*a4)-(c5*a5);
 //stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*b1)-(c2*b2)-(c3*b3)-(c4*b4)-(c5*b5);
