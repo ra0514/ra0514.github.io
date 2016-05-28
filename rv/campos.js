@@ -84,6 +84,7 @@ raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
 raycaster3=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,1,0));
 raycaster4=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,-1,0));
 
+
 //Creo la luz conica-----
 var luzconica = new THREE.SpotLight( 0xffffff );
 pelota.add(luzconica);
@@ -109,18 +110,75 @@ escena.add(luzconica)
 renderer=new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
+
+OBJETIVOX=50;
+OBJETIVOY=50;
+
 stepy=0.2;
-stepx=0;
+stepx=0.2;
 }
 
 function loop(){
+//todos los posibles obstaculos
+obstaculo1D=raycaster1.intersectObject(cubo1);
+obstaculo1I=raycaster2.intersectObject(cubo1);
+obstaculo1U=raycaster3.intersectObject(cubo1);
+obstaculo1DD=raycaster4.intersectObject(cubo1);
+
+obstaculo2D=raycaster1.intersectObject(cubo2);
+obstaculo2I=raycaster2.intersectObject(cubo2);
+obstaculo2U=raycaster3.intersectObject(cubo2);
+obstaculo2DD=raycaster4.intersectObject(cubo2);
+
+obstaculo3D=raycaster1.intersectObject(cubo3);
+obstaculo3I=raycaster2.intersectObject(cubo3);
+obstaculo3U=raycaster3.intersectObject(cubo3);
+obstaculo3DD=raycaster4.intersectObject(cubo3);
+
+obstaculo4D=raycaster1.intersectObject(cubo4);
+obstaculo4I=raycaster2.intersectObject(cubo4);
+obstaculo4U=raycaster3.intersectObject(cubo4);
+obstaculo4DD=raycaster4.intersectObject(cubo4);
+
+obstaculo5D=raycaster1.intersectObject(cubo5);
+obstaculo5I=raycaster2.intersectObject(cubo5);
+obstaculo5U=raycaster3.intersectObject(cubo5);
+obstaculo5DD=raycaster4.intersectObject(cubo5);
+
+if(pelota.position.y<OBJETIVOY)
+stepy=0.2;
+else
+stepy=-0.2;
+
+
+if(pelota.position.x<OBJETIVOX)
+stepx=0.2;
+else
+stepx=-0.2;
+
+
+pelota.position.y +=stepy;
+pelota.position.x +=stepx;
+
+//sensores
+raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
+raycaster2.set(pelota.position,new THREE.Vector3(-1,0,0));
+raycaster3.set(pelota.position,new THREE.Vector3(0,1,0));
+raycaster4.set(pelota.position,new THREE.Vector3(0,-1,0));
+
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
 }
 
 var pared1,pared2,pared3,pared4,pared5,cubo1,cubo2,cubo3,cubo4,pelota,escena,camara,renderer;
 var raycaster1,raycaster2,raycaster3,raycaster4,step;
-var obstaculo1,obstaculo2,obstaculo3,obstaculo4;
+
+var obstaculo1D,obstaculo1I,obstaculo1U,obstaculo1DD;
+var obstaculo2D,obstaculo2I,obstaculo2U,obstaculo2DD;
+var obstaculo3D,obstaculo3I,obstaculo3U,obstaculo3DD;
+var obstaculo4D,obstaculo4I,obstaculo4U,obstaculo4DD;
+var obstaculo5D,obstaculo5I,obstaculo5U,obstaculo5DD;
+
 var luzconica;
 
 setup();
