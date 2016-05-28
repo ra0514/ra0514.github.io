@@ -4,10 +4,10 @@ THREE.ImageUtils.crossOrigin='';
 var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
 
 //la habitacion  
-cubo1=new THREE.Mesh(new THREE.BoxGeometry(0.5,60,3),new THREE.MeshBasicMaterial({map:textura}));
-cubo2=new THREE.Mesh(new THREE.BoxGeometry(0.5,60,3),new THREE.MeshBasicMaterial({map:textura}));
-cubo3=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
-cubo4=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
+cubo1=new THREE.Mesh(new THREE.BoxGeometry(0.5,80,3),new THREE.MeshBasicMaterial({map:textura}));
+cubo2=new THREE.Mesh(new THREE.BoxGeometry(0.5,80,3),new THREE.MeshBasicMaterial({map:textura}));
+cubo3=new THREE.Mesh(new THREE.BoxGeometry(80,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
+cubo4=new THREE.Mesh(new THREE.BoxGeometry(80,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
 
 
 //los obstaculos
@@ -18,10 +18,10 @@ pared4= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMateria
 pared5= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
 
 
-cubo1.position.x=27;
-cubo2.position.x=-27;
-cubo3.position.y=-27;
-cubo4.position.y=27;
+cubo1.position.x=37;
+cubo2.position.x=-37;
+cubo3.position.y=-37;
+cubo4.position.y=37;
 
 pared1.position.x=-15;
 pared1.position.y=-10;
@@ -77,7 +77,7 @@ pelota.scale.y=0.3;
 
 //+++++++++++++++++++++++++++++
 camara=new THREE.PerspectiveCamera();
-camara.position.z=60;
+camara.position.z=80;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
