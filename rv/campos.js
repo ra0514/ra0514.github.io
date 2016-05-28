@@ -2,8 +2,9 @@ function setup(){
 //Escenario
 THREE.ImageUtils.crossOrigin='';
 var textura = THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/brick_diffuse.jpg');
-  
-cubo1=new THREE.Mesh(new THREE.BoxGeometry(0.5,50,3),new THREE.MeshBasicMaterial({map:textura}));
+
+//la habitacion  
+cubo1=new THREE.Mesh(new THREE.BoxGeometry(0.5,60,3),new THREE.MeshBasicMaterial({map:textura}));
 cubo2=new THREE.Mesh(new THREE.BoxGeometry(0.5,60,3),new THREE.MeshBasicMaterial({map:textura}));
 cubo3=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
 cubo4=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMaterial({map:textura}));
@@ -13,6 +14,13 @@ pared2= new THREE.Mesh(new THREE.BoxGeometry(15,0.5,3),new  THREE.MeshBasicMater
 pared3= new THREE.Mesh(new THREE.BoxGeometry(0.5,25,3),new  THREE.MeshBasicMaterial({map:textura}));
 pared4= new THREE.Mesh(new THREE.BoxGeometry(0.5,15,3),new  THREE.MeshBasicMaterial({map:textura}));
 pared5= new THREE.Mesh(new THREE.BoxGeometry(0.5,15,3),new  THREE.MeshBasicMaterial({map:textura}));
+
+
+cubo1.position.x=27;
+cubo1.position.y=10
+cubo2.position.x=-27;
+cubo3.position.y=-27;
+cubo4.position.y=27;
 
 pared1.position.x=-15;
 pared1.position.y=-10;
@@ -25,11 +33,7 @@ pared4.position.y=10;
 pared5.position.x=15;
 pared5.position.y=-20;
 
-cubo1.position.x=27;
-cubo1.position.y=10
-cubo2.position.x=-27;
-cubo3.position.y=-27;
-cubo4.position.y=27;
+
 //+++++++++++++++++++++++
 //MOVIL////
 var canon=new THREE.Mesh(new THREE.BoxGeometry(4,4,1));
