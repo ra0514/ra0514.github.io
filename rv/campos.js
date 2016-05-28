@@ -87,7 +87,7 @@ raycaster4=new THREE.Raycaster(pelota.position,new THREE.Vector3(0,-1,0));
 //Creo la luz conica-----
 var luzconica = new THREE.SpotLight( 0xffffff );
 pelota.add(luzconica);
-luzconica.position.set(-5,-5,1);
+luzconica.position.set(5,-5,1);
 luzconica.target = pelota;
 luzconica.intensity = 1;
 //------------
