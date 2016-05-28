@@ -154,26 +154,31 @@ obstaculo5DD=raycaster4.intersectObject(pared5);
 if((obstaculo1D.length>0 && (obstaculo1D[0].distance<=5))||(obstaculo1I.length>0 && (obstaculo1I[0].distance<=5))||(obstaculo1U.length>0 && (obstaculo1U[0].distance<=5))||(obstaculo1DD.length>0 && (obstaculo1DD[0].distance<=5)))
 {
 pared1.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+c1=1;
 };
 if((obstaculo2D.length>0 && (obstaculo2D[0].distance<=5))||(obstaculo2I.length>0 && (obstaculo2I[0].distance<=5))||(obstaculo2U.length>0 && (obstaculo2U[0].distance<=5))||(obstaculo2DD.length>0 && (obstaculo2DD[0].distance<=5)))
 {
 pared2.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
+c2=1;
 };
 if((obstaculo3D.length>0 && (obstaculo3D[0].distance<=5))||(obstaculo3I.length>0 && (obstaculo3I[0].distance<=5))||(obstaculo3U.length>0 && (obstaculo3U[0].distance<=5))||(obstaculo3DD.length>0 && (obstaculo3DD[0].distance<=5)))
 {
+c3=1;
 pared3.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 if((obstaculo4D.length>0 && (obstaculo4D[0].distance<=5))||(obstaculo4I.length>0 && (obstaculo4I[0].distance<=5))||(obstaculo4U.length>0 && (obstaculo4U[0].distance<=5))||(obstaculo4DD.length>0 && (obstaculo4DD[0].distance<=5)))
 {
+c4=1;
 pared4.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 if((obstaculo5D.length>0 && (obstaculo5D[0].distance<=5))||(obstaculo5I.length>0 && (obstaculo5I[0].distance<=5))||(obstaculo5U.length>0 && (obstaculo5U[0].distance<=5))||(obstaculo5DD.length>0 && (obstaculo5DD[0].distance<=5)))
 {
+c5=1;
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-stepy=(OBJETIVOY-pelota.position.y)/100;
-stepx=(OBJETIVOX-pelota.position.x)/100;
+stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*(pared1.position.y-pelota.position.y)/200)-(c2*(pared2.position.y-pelota.position.y)/200)-(c3*(pared3.position.y-pelota.position.y)/200)-(c4*(pared4.position.y-pelota.position.y)/200)-(c5*(pared5.position.y-pelota.position.y)/200);
+stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*(pared1.position.x-pelota.position.x)/200)-(c2*(pared2.position.x-pelota.position.x)/200)-(c3*(pared3.position.x-pelota.position.x)/200)-(c4*(pared4.position.x-pelota.position.x)/200)-(c5*(pared5.position.x-pelota.position.x)/200);
 
 
 pelota.position.y +=stepy;
