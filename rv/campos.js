@@ -187,17 +187,37 @@ c5=1;
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-a1=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
-a2=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
-a3=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
-a4=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
-a5=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+//campos de obstaculos
+if(((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y))>0)
+{
+a1=(pared1.position.y-pelota.position.y)/((pared1.position.y-pelota.position.y)*(pared1.position.y-pelota.position.y));
+b1=(pared1.position.x-pelota.position.x)/((pared1.position.x-pelota.position.x)*(pared1.position.x-pelota.position.x));
+};
 
-b1=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
-b2=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+if(((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y))>0)
+{
+a2=(pared2.position.y-pelota.position.y)/((pared2.position.y-pelota.position.y)*(pared2.position.y-pelota.position.y));
+b2=(pared2.position.x-pelota.position.x)/((pared2.position.x-pelota.position.x)*(pared2.position.x-pelota.position.x));
+};
+
+if(((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y))>0)
+{
+a3=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
 b3=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
-b4=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
-b5=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+};
+
+if(((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y))>0)
+{
+a4=(pared4.position.y-pelota.position.y)/((pared4.position.y-pelota.position.y)*(pared4.position.y-pelota.position.y));
+b4=(pared4.position.x-pelota.position.x)/((pared4.position.x-pelota.position.x)*(pared4.position.x-pelota.position.x));
+};
+
+if(((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y))>0)
+{
+a5=(pared5.position.y-pelota.position.y)/((pared5.position.y-pelota.position.y)*(pared5.position.y-pelota.position.y));
+b5=(pared5.position.x-pelota.position.x)/((pared5.position.x-pelota.position.x)*(pared5.position.x-pelota.position.x));
+};
+
 
 stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2)-(c3*a3)-(c4*a4)-(c5*a5);
 stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*b1)-(c2*b2)-(c3*b3)-(c4*b4)-(c5*b5);
