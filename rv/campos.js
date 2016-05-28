@@ -113,7 +113,7 @@ document.body.appendChild(renderer.domElement);
 
 //seleccionar objetivo
 OBJETIVOX=-20;
-OBJETIVOY=10;
+OBJETIVOY=20;
 //OBJETIVOX=10;
 //OBJETIVOY=20;
 
