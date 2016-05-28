@@ -11,11 +11,11 @@ cubo4=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMateria
 
 
 //los obstaculos
-pared1= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared2= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared3= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared4= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared5= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared1= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
+pared2= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
+pared3= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
+pared4= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
+pared5= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new THREE.MeshLambertMaterial({color:'#ffff00'}));
 
 
 cubo1.position.x=27;
