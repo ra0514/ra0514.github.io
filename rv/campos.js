@@ -172,8 +172,8 @@ if((obstaculo5D.length>0 && (obstaculo5D[0].distance<=5))||(obstaculo5I.length>0
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-stepy=OBJETIVOY-pelota.position.y;
-stepx=OBJETIVOX-pelota.position.x;
+stepy=(OBJETIVOY-pelota.position.y)/100;
+stepx=(OBJETIVOX-pelota.position.x)/100;
 
 
 pelota.position.y +=stepy;
