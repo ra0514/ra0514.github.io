@@ -121,6 +121,16 @@ c2=0;
 c3=0;
 c4=0;
 c5=0;
+a1=0;
+a2=0;
+a3=0;
+a4=0;
+a5=0;
+b1=0;
+b2=0;
+b3=0;
+b4=0;
+b5=0;
 }
 
 function loop(){
@@ -163,7 +173,7 @@ c2=1;
 };
 if((obstaculo3D.length>0 && (obstaculo3D[0].distance<=5))||(obstaculo3I.length>0 && (obstaculo3I[0].distance<=5))||(obstaculo3U.length>0 && (obstaculo3U[0].distance<=5))||(obstaculo3DD.length>0 && (obstaculo3DD[0].distance<=5)))
 {
-c3=0.1;
+c3=1;
 pared3.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 if((obstaculo4D.length>0 && (obstaculo4D[0].distance<=5))||(obstaculo4I.length>0 && (obstaculo4I[0].distance<=5))||(obstaculo4U.length>0 && (obstaculo4U[0].distance<=5))||(obstaculo4DD.length>0 && (obstaculo4DD[0].distance<=5)))
@@ -177,10 +187,20 @@ c5=1;
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-stepy=((OBJETIVOY-pelota.position.y)/100)-(c3/(pared3.position.y-pelota.position.y));
-stepx=((OBJETIVOX-pelota.position.x)/100);
-//stepy=((OBJETIVOY-pelota.position.y)/100)-(c1/(pared1.position.y-pelota.position.y))-(c2/(pared2.position.y-pelota.position.y))-(c3/(pared3.position.y-pelota.position.y))-(c4/(pared4.position.y-pelota.position.y))-(c5/(pared5.position.y-pelota.position.y));
-//stepx=((OBJETIVOX-pelota.position.x)/100)-(c1/(pared1.position.x-pelota.position.x))-(c2/(pared2.position.x-pelota.position.x))-(c3/(pared3.position.x-pelota.position.x))-(c4/(pared4.position.x-pelota.position.x))-(c5/(pared5.position.x-pelota.position.x));
+a1=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+a2=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+a3=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+a4=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+a5=(pared3.position.y-pelota.position.y)/((pared3.position.y-pelota.position.y)*(pared3.position.y-pelota.position.y));
+
+b1=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+b2=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+b3=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+b4=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+b5=(pared3.position.x-pelota.position.x)/((pared3.position.x-pelota.position.x)*(pared3.position.x-pelota.position.x));
+
+stepy=((OBJETIVOY-pelota.position.y)/100)-(c1*a1)-(c2*a2)-(c3*a3)-(c4*a4)-(c5*a5);
+stepx=((OBJETIVOX-pelota.position.x)/100)-(c1*b1)-(c2*b2)-(c3*b3)-(c4*b4)-(c5*b5);
 
 
 pelota.position.y +=stepy;
