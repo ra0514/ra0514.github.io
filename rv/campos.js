@@ -177,7 +177,7 @@ c5=1;
 pared5.material= new  THREE.MeshBasicMaterial({color:'#ff00ff'});
 };
 
-stepy=((OBJETIVOY-pelota.position.y)/100)-(c1/(pared1.position.y-pelota.position.y));
+stepy=((OBJETIVOY-pelota.position.y)/100)-(c3/(pared3.position.y-pelota.position.y));
 stepx=((OBJETIVOX-pelota.position.x)/100);
 //stepy=((OBJETIVOY-pelota.position.y)/100)-(c1/(pared1.position.y-pelota.position.y))-(c2/(pared2.position.y-pelota.position.y))-(c3/(pared3.position.y-pelota.position.y))-(c4/(pared4.position.y-pelota.position.y))-(c5/(pared5.position.y-pelota.position.y));
 //stepx=((OBJETIVOX-pelota.position.x)/100)-(c1/(pared1.position.x-pelota.position.x))-(c2/(pared2.position.x-pelota.position.x))-(c3/(pared3.position.x-pelota.position.x))-(c4/(pared4.position.x-pelota.position.x))-(c5/(pared5.position.x-pelota.position.x));
