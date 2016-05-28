@@ -251,7 +251,7 @@ pelota.material= new  THREE.MeshBasicMaterial({color:'#0000ff'});
 
 pelota.position.y +=stepy;
 pelota.position.x +=stepx;
-pelota.rotation.z=Math.tan(stepy/stepx)-1.57;
+pelota.rotation.z=Math.atan(stepy/stepx)-1.57;
 
 //sensores
 raycaster1.set(pelota.position,new THREE.Vector3(1,0,0));
