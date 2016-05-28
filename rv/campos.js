@@ -67,7 +67,7 @@ THREE.GeometryUtils.merge(forma,llanta2);
 //igualar al programa anterior
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
-pelota.position.x=-22;
+pelota.position.x=0;
 pelota.position.y=-22;
 
 pelota.scale.x=0.5;
