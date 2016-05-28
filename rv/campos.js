@@ -11,11 +11,11 @@ cubo4=new THREE.Mesh(new THREE.BoxGeometry(60,0.5,3),new  THREE.MeshBasicMateria
 
 
 //los obstaculos
-pared1= new THREE.Mesh(new THREE.BoxGeometry(5,5,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared2= new THREE.Mesh(new THREE.BoxGeometry(5,5,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared3= new THREE.Mesh(new THREE.BoxGeometry(5,5,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared4= new THREE.Mesh(new THREE.BoxGeometry(5,5,3),new  THREE.MeshBasicMaterial({map:textura}));
-pared5= new THREE.Mesh(new THREE.BoxGeometry(5,5,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared1= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared2= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared3= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared4= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
+pared5= new THREE.Mesh(new THREE.BoxGeometry(2,2,3),new  THREE.MeshBasicMaterial({map:textura}));
 
 
 cubo1.position.x=27;
@@ -63,13 +63,21 @@ THREE.GeometryUtils.merge(forma,abajo);
 THREE.GeometryUtils.merge(forma,llanta1);
 THREE.GeometryUtils.merge(forma,llanta2);
 
+
+//igualar al programa anterior
 pelota=new THREE.Mesh(forma,new THREE.MeshNormalMaterial());
 
 pelota.position.x=-22;
 pelota.position.y=-22;
+
+pelota.scale.x=0.5;
+pelota.scale.z=0.5;
+pelota.scale.y=0.5;
+
+
 //+++++++++++++++++++++++++++++
 camara=new THREE.PerspectiveCamera();
-camara.position.z=60;
+camara.position.z=100;
 
 raycaster1=new THREE.Raycaster(pelota.position,new THREE.Vector3(1,0,0));
 raycaster2=new THREE.Raycaster(pelota.position,new THREE.Vector3(-1,0,0));
@@ -82,7 +90,7 @@ pelota.add(luzconica);
 luzconica.position.set(-5,-5,0);
 luzconica.target = pelota;
 //luzconica.position.set( -5,-5,0);
-luzconica.intensity = 1;
+luzconica.intensity = 0.5;
 //------------
 
 escena=new THREE.Scene();
